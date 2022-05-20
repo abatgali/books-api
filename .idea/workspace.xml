@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feed9217-060b-48a5-9ab6-4c410db31627" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="feed9217-060b-48a5-9ab6-4c410db31627" name="Changes" comment="Folder Structure for API integration and database linkage.">
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +60,16 @@
       <workItem from="1652902733452" duration="348000" />
       <workItem from="1652903094394" duration="1420000" />
       <workItem from="1652905167855" duration="3464000" />
-      <workItem from="1653069324521" duration="490000" />
+      <workItem from="1653069324521" duration="666000" />
     </task>
+    <task id="LOCAL-00001" summary="Folder Structure for API integration and database linkage.">
+      <created>1653069859040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653069859040</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,5 +85,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Folder Structure for API integration and database linkage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Folder Structure for API integration and database linkage." />
   </component>
 </project>

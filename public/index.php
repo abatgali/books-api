@@ -15,7 +15,7 @@ require __DIR__ . '/../vendor/autoload.php';
 // Instantiate app
 $app = AppFactory::create();
 //Set basepath
-$app->setBasePath('/I425/mycollege-api');
+$app->setBasePath('/Documents/GitHub/books-api');
 // Add middleware for parsing JSON, form data and xml
 $app->addBodyParsingMiddleware();
 // Add the Slim built-in routing middleware
