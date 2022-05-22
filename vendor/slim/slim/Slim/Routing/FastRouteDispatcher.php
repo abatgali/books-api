@@ -23,7 +23,7 @@ class FastRouteDispatcher extends GroupCountBased
      * @param string $httpMethod
      * @param string $uri
      *
-     * @return array{int, string|null, array<string, string>}
+     * @return array<mixed>
      */
     public function dispatch($httpMethod, $uri): array
     {
@@ -57,21 +57,17 @@ class FastRouteDispatcher extends GroupCountBased
      * @param string $httpMethod
      * @param string $uri
      *
-     * @return array{int, string|null, array<string, string>}
+     * @return array<mixed>
      */
     private function routingResults(string $httpMethod, string $uri): array
     {
         if (isset($this->staticRouteMap[$httpMethod][$uri])) {
-            /** @var string $routeIdentifier */
-            $routeIdentifier = $this->staticRouteMap[$httpMethod][$uri];
-            return [self::FOUND, $routeIdentifier, []];
+            return [self::FOUND, $this->staticRouteMap[$httpMethod][$uri], []];
         }
 
         if (isset($this->variableRouteData[$httpMethod])) {
-            /** @var array{0: int, 1?: string, 2?: array<string, string>} $result */
             $result = $this->dispatchVariableRoute($this->variableRouteData[$httpMethod], $uri);
             if ($result[0] === self::FOUND) {
-                /** @var array{int, string, array<string, string>} $result */
                 return [self::FOUND, $result[1], $result[2]];
             }
         }

@@ -106,38 +106,23 @@ class AppFactory
     public static function createFromContainer(ContainerInterface $container): App
     {
         $responseFactory = $container->has(ResponseFactoryInterface::class)
-        && (
-            $responseFactoryFromContainer = $container->get(ResponseFactoryInterface::class)
-        ) instanceof ResponseFactoryInterface
-            ? $responseFactoryFromContainer
+            ? $container->get(ResponseFactoryInterface::class)
             : self::determineResponseFactory();
 
         $callableResolver = $container->has(CallableResolverInterface::class)
-        && (
-            $callableResolverFromContainer = $container->get(CallableResolverInterface::class)
-        ) instanceof CallableResolverInterface
-            ? $callableResolverFromContainer
+            ? $container->get(CallableResolverInterface::class)
             : null;
 
         $routeCollector = $container->has(RouteCollectorInterface::class)
-        && (
-            $routeCollectorFromContainer = $container->get(RouteCollectorInterface::class)
-        ) instanceof RouteCollectorInterface
-            ? $routeCollectorFromContainer
+            ? $container->get(RouteCollectorInterface::class)
             : null;
 
         $routeResolver = $container->has(RouteResolverInterface::class)
-        && (
-            $routeResolverFromContainer = $container->get(RouteResolverInterface::class)
-        ) instanceof RouteResolverInterface
-            ? $routeResolverFromContainer
+            ? $container->get(RouteResolverInterface::class)
             : null;
 
         $middlewareDispatcher = $container->has(MiddlewareDispatcherInterface::class)
-        && (
-            $middlewareDispatcherFromContainer = $container->get(MiddlewareDispatcherInterface::class)
-        ) instanceof MiddlewareDispatcherInterface
-            ? $middlewareDispatcherFromContainer
+            ? $container->get(MiddlewareDispatcherInterface::class)
             : null;
 
         return new App(
