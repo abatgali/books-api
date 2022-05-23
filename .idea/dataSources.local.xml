@@ -2,6 +2,10 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PS-221.5591.58">
     <data-source name="books_I425@localhost" uuid="70565d18-468d-4197-94d4-880077ac668d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" exact-version="0" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="group5_books_db@localhost" uuid="23f22e0c-db27-4ada-bbc2-cde315d24cef">
       <database-info product="MariaDB" version="10.4.24-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="2.7">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>

@@ -28,6 +28,12 @@ return function(App $app){
             $group->get('', 'Book:index');
             $group->get('/{id}', 'Book:view');
         });
+        //Route group for Authors pattern (all authors works, by id does not)
+        $group->group('/authors', function (RouteCollectorProxy $group){
+            $group->get('','Author:index');
+            $group->get('/{id}','Author:view');
+        });
+
     });
 };
 

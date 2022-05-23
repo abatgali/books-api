@@ -1,29 +1,30 @@
 <?php
 /**
- * Author: "Emma Parker"
- * Date: 5/22/22
- * File: BookController.php
- *Description: define the book controller class
+ * Author:  Adam Wright
+ * Date: 5/23/2022
+ * Project: books-api
+ * USER : awrig
+ * DESCRIPTION:
  */
 
 namespace BooksAPI\Controllers;
 
 
+use BooksAPI\Models\Author;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use BooksAPI\Models\Book;
 use BooksAPI\Controllers\ControllerHelper as Helper;
-class BookController {
+class AuthorController {
     //list all books
     public function index( Request $request, Response $response, array $args) : Response {
-        $results = Book::getBooks();
+        $results = Author::getAuthors();
         return Helper::withJson($response, $results, 200);
     }
 
     public function view( Request $request, Response $response, array $args) : Response {
 
-        $results = Book::getBookById($args['id']);
-       return Helper::withJson($response, $results, 200);
+        $results = Author::getAuthorById($args['id']);
+        return Helper::withJson($response, $results, 200);
     }
 
 }
