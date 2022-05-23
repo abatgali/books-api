@@ -40,10 +40,6 @@ final class RouteContext
             throw new RuntimeException('Cannot create RouteContext before routing has been completed');
         }
 
-        /** @var RouteInterface|null $route */
-        /** @var RouteParserInterface $routeParser */
-        /** @var RoutingResults $routingResults */
-        /** @var string|null $basePath */
         return new self($route, $routeParser, $routingResults, $basePath);
     }
 

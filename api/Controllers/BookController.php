@@ -15,12 +15,12 @@ use BooksAPI\Models\Book;
 use BooksAPI\Controllers\ControllerHelper as Helper;
 class BookController {
     //list all books
-    public function index(Request $request, Response $response, array $args) : Response {
+    public function index(Response $response, array $args) : Response {
         $results = Book::getBooks();
         return Helper::withJson($response, $results, 200);
     }
 
-    public function view(Request $request,Response $response, array $args) : Response {
+    public function view(Response $response, array $args) : Response {
         $book_id = $args['book_id'];
         $results = Book::getBookById($book_id);
        return Helper::withJson($response, $results, 200);
