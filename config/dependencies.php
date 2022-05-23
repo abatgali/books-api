@@ -8,7 +8,8 @@
 use DI\Container;
 //add all use statements here
 use BooksAPI\Controllers\{
-    BookController
+    BookController,
+    AuthorController
 };
 
 return function(Container $container) {
@@ -16,5 +17,8 @@ return function(Container $container) {
         //set a dependency called "Book"
         $container->set('Book', function(){
             return new BookController();
+        });
+        $container->set('Author', function (){
+            return new AuthorController();
         });
 };
