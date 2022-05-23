@@ -7,7 +7,9 @@
  */
 use DI\Container;
 //add all use statements here
-use BooksAPI\Controllers\BookController;
+use BooksAPI\Controllers\{
+    BookController
+};
 
 return function(Container $container) {
     // define all dependency functions here
