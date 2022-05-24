@@ -28,10 +28,23 @@ return function(App $app){
             $group->get('', 'Book:index');
             $group->get('/{id}', 'Book:view');
         });
-        //Route group for Authors pattern (all authors works, by id does not)
+        //Route group for Authors pattern
         $group->group('/authors', function (RouteCollectorProxy $group){
             $group->get('','Author:index');
             $group->get('/{id}','Author:view');
+        });
+
+        //Route group for Genres pattern (all genres works but not ID
+
+        $group->group('/genres', function (RouteCollectorProxy $group){
+            $group->get('','Genre:index');
+            $group->get('/{id}','Genre:view');
+        });
+
+        //Route group for Authors and Books pattern
+        $group->group('/authors_and_books', function (RouteCollectorProxy $group){
+            $group->get('','AuthorAndBook:index');
+            $group->get('/{id}','AuthorAndBook:view');
         });
 
     });
