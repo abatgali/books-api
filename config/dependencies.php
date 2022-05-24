@@ -9,7 +9,9 @@ use DI\Container;
 //add all use statements here
 use BooksAPI\Controllers\{
     BookController,
-    AuthorController
+    AuthorController,
+    GenreController,
+
 };
 
 return function(Container $container) {
@@ -20,5 +22,11 @@ return function(Container $container) {
         });
         $container->set('Author', function (){
             return new AuthorController();
+        });
+        $container->set('Genre', function () {
+            return new GenreController();
+        });
+        $container->set('AuthorAndBook', function (){
+            return new AuthorAndBookController();
         });
 };
