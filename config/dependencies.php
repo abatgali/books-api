@@ -11,6 +11,7 @@ use BooksAPI\Controllers\{
     BookController,
     AuthorController,
     GenreController,
+    AuthorAndBooksController
 
 };
 
@@ -27,6 +28,6 @@ return function(Container $container) {
             return new GenreController();
         });
         $container->set('AuthorAndBook', function (){
-            return new AuthorAndBookController();
+            return new AuthorAndBooksController();
         });
 };
