@@ -9,7 +9,9 @@ use DI\Container;
 //add all use statements here
 use BooksAPI\Controllers\{
     BookController,
-    AuthorController
+    AuthorController,
+    GenreController,
+
 };
 
 return function(Container $container) {
@@ -21,6 +23,7 @@ return function(Container $container) {
         $container->set('Author', function (){
             return new AuthorController();
         });
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
         //dependencies for genres table
@@ -32,4 +35,12 @@ return function(Container $container) {
             return new AuthorAndBookController();
         });
 >>>>>>> Stashed changes
+=======
+        $container->set('Genre', function () {
+            return new GenreController();
+        });
+        $container->set('AuthorAndBook', function (){
+            return new AuthorAndBookController();
+        });
+>>>>>>> f7c4c6e966ead4d038e237492c3ef87c45385cc8
 };
