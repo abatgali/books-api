@@ -50,6 +50,11 @@ return function(App $app){
             $group->get('/{id}','AuthorAndBook:view');
         });
 
+        //Route group for Publishers pattern
+        $group->group('/publishers', function (RouteCollectorProxy $group){
+            $group->get('','Publisher:index');
+            $group->get('/{id}','Publisher:view');
+        });
     });
 };
 
