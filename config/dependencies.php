@@ -21,4 +21,15 @@ return function(Container $container) {
         $container->set('Author', function (){
             return new AuthorController();
         });
+<<<<<<< Updated upstream
+=======
+        //dependencies for genres table
+        $container->set('Genre', function () {
+            return new GenreController();
+        });
+        //dependencies for Author and Books table
+        $container->set('AuthorAndBook', function (){
+            return new AuthorAndBookController();
+        });
+>>>>>>> Stashed changes
 };
