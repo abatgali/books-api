@@ -7,29 +7,28 @@
  * DESCRIPTION:
  */
 
+
 namespace BooksAPI\Controllers;
 
-use BooksAPI\Models\Book;
+
+use BooksAPI\Models\AuthorAndBook;
+
+use Illuminate\Support\Facades\Auth;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use BooksAPI\Models\Genre;
 use BooksAPI\Controllers\ControllerHelper as Helper;
-class GenreController {
-    //list all genres
 
+
+class AuthorAndBooksController {
+    //list all books
     public function index( Request $request, Response $response, array $args) : Response {
-        $results = Genre::getGenres();
+        $results = AuthorAndBook::getAuthorsAndBooks();
         return Helper::withJson($response, $results, 200);
     }
-    //view all classes taught by a professor
-    public function getBooksByGenre(Request $request, Response $response, array $args): Response {
-        $id = $args['id'];
-        $results = Genre::getBooksByGenre($id);
-        return Helper::withJson($response, $results, 200);
-    }
+
     public function view( Request $request, Response $response, array $args) : Response {
 
-        $results = Genre::getGenreById($args['id']);
+        $results = AuthorAndBook::getAuthorAndBookById($args['id']);
         return Helper::withJson($response, $results, 200);
     }
 

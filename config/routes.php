@@ -27,6 +27,7 @@ return function(App $app){
         $group->group('/books', function (RouteCollectorProxy $group){
             $group->get('', 'Book:index');
             $group->get('/{id}', 'Book:view');
+
         });
         //Route group for Authors pattern
         $group->group('/authors', function (RouteCollectorProxy $group){
@@ -39,6 +40,8 @@ return function(App $app){
         $group->group('/genres', function (RouteCollectorProxy $group){
             $group->get('','Genre:index');
             $group->get('/{id}','Genre:view');
+            $group->get('/{id}/books', 'Genre::getBooksByGenre');
+
         });
 
         //Route group for Authors and Books pattern

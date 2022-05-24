@@ -33,13 +33,17 @@ class Genre extends Model
         return $genres;
     }
 
-    public static function getAuthorById(string $id)
+    public static function getGenreById(string $id)
     {
         $genre = self::findOrFail($id);
         return $genre;
 
 
     }
-
-
+    //genre to books relationship, many books to one genre
+    public static function getBooksByGenre(string $id)
+    {
+        $books = self::findOrFail($id)->books;
+        return $books;
+    }
 }
