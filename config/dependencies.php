@@ -11,7 +11,7 @@ use BooksAPI\Controllers\{
     BookController,
     AuthorController,
     GenreController,
-
+    PublisherController
 };
 
 return function(Container $container) {
@@ -23,9 +23,7 @@ return function(Container $container) {
         $container->set('Author', function (){
             return new AuthorController();
         });
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
+
         //dependencies for genres table
         $container->set('Genre', function () {
             return new GenreController();
@@ -34,13 +32,9 @@ return function(Container $container) {
         $container->set('AuthorAndBook', function (){
             return new AuthorAndBookController();
         });
->>>>>>> Stashed changes
-=======
-        $container->set('Genre', function () {
-            return new GenreController();
+
+        $container->set('Publisher', function () {
+            return new PublisherController();
         });
-        $container->set('AuthorAndBook', function (){
-            return new AuthorAndBookController();
-        });
->>>>>>> f7c4c6e966ead4d038e237492c3ef87c45385cc8
+
 };
