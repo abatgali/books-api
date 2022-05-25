@@ -1,0 +1,422 @@
+Index: .idea/dataSources/70565d18-468d-4197-94d4-880077ac668d.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<dataSource name=\"books_I425@localhost\">\n  <database-model serializer=\"dbm\" dbms=\"MARIADB\" family-id=\"MARIADB\" format-version=\"4.39\">\n    <root id=\"1\">\n      <DefaultCasing>lower/lower</DefaultCasing>\n      <DefaultEngine>InnoDB</DefaultEngine>\n      <Grants>|root||phpuser||ALTER|G\n|root||root|127.0.0.1|ALTER|G\n|root||root|::1|ALTER|G\n|root||root|localhost|ALTER|G\n|root||phpuser||ALTER ROUTINE|G\n|root||root|127.0.0.1|ALTER ROUTINE|G\n|root||root|::1|ALTER ROUTINE|G\n|root||root|localhost|ALTER ROUTINE|G\n|root||phpuser||CREATE|G\n|root||root|127.0.0.1|CREATE|G\n|root||root|::1|CREATE|G\n|root||root|localhost|CREATE|G\n|root||phpuser||CREATE ROUTINE|G\n|root||root|127.0.0.1|CREATE ROUTINE|G\n|root||root|::1|CREATE ROUTINE|G\n|root||root|localhost|CREATE ROUTINE|G\n|root||phpuser||CREATE TABLESPACE|G\n|root||root|127.0.0.1|CREATE TABLESPACE|G\n|root||root|::1|CREATE TABLESPACE|G\n|root||root|localhost|CREATE TABLESPACE|G\n|root||phpuser||CREATE TEMPORARY TABLES|G\n|root||root|127.0.0.1|CREATE TEMPORARY TABLES|G\n|root||root|::1|CREATE TEMPORARY TABLES|G\n|root||root|localhost|CREATE TEMPORARY TABLES|G\n|root||phpuser||CREATE USER|G\n|root||root|127.0.0.1|CREATE USER|G\n|root||root|::1|CREATE USER|G\n|root||root|localhost|CREATE USER|G\n|root||phpuser||CREATE VIEW|G\n|root||root|127.0.0.1|CREATE VIEW|G\n|root||root|::1|CREATE VIEW|G\n|root||root|localhost|CREATE VIEW|G\n|root||phpuser||DELETE|G\n|root||root|127.0.0.1|DELETE|G\n|root||root|::1|DELETE|G\n|root||root|localhost|DELETE|G\n|root||phpuser||DELETE HISTORY|G\n|root||root|127.0.0.1|DELETE HISTORY|G\n|root||root|::1|DELETE HISTORY|G\n|root||root|localhost|DELETE HISTORY|G\n|root||phpuser||DROP|G\n|root||root|127.0.0.1|DROP|G\n|root||root|::1|DROP|G\n|root||root|localhost|DROP|G\n|root||phpuser||EVENT|G\n|root||root|127.0.0.1|EVENT|G\n|root||root|::1|EVENT|G\n|root||root|localhost|EVENT|G\n|root||phpuser||EXECUTE|G\n|root||root|127.0.0.1|EXECUTE|G\n|root||root|::1|EXECUTE|G\n|root||root|localhost|EXECUTE|G\n|root||phpuser||FILE|G\n|root||root|127.0.0.1|FILE|G\n|root||root|::1|FILE|G\n|root||root|localhost|FILE|G\n|root||phpuser||INDEX|G\n|root||root|127.0.0.1|INDEX|G\n|root||root|::1|INDEX|G\n|root||root|localhost|INDEX|G\n|root||phpuser||INSERT|G\n|root||root|127.0.0.1|INSERT|G\n|root||root|::1|INSERT|G\n|root||root|localhost|INSERT|G\n|root||phpuser||LOCK TABLES|G\n|root||root|127.0.0.1|LOCK TABLES|G\n|root||root|::1|LOCK TABLES|G\n|root||root|localhost|LOCK TABLES|G\n|root||phpuser||PROCESS|G\n|root||root|127.0.0.1|PROCESS|G\n|root||root|::1|PROCESS|G\n|root||root|localhost|PROCESS|G\n|root||phpuser||REFERENCES|G\n|root||root|127.0.0.1|REFERENCES|G\n|root||root|::1|REFERENCES|G\n|root||root|localhost|REFERENCES|G\n|root||phpuser||RELOAD|G\n|root||root|127.0.0.1|RELOAD|G\n|root||root|::1|RELOAD|G\n|root||root|localhost|RELOAD|G\n|root||phpuser||REPLICATION CLIENT|G\n|root||root|127.0.0.1|REPLICATION CLIENT|G\n|root||root|::1|REPLICATION CLIENT|G\n|root||root|localhost|REPLICATION CLIENT|G\n|root||phpuser||REPLICATION SLAVE|G\n|root||root|127.0.0.1|REPLICATION SLAVE|G\n|root||root|::1|REPLICATION SLAVE|G\n|root||root|localhost|REPLICATION SLAVE|G\n|root||phpuser||SELECT|G\n|root||root|127.0.0.1|SELECT|G\n|root||root|::1|SELECT|G\n|root||root|localhost|SELECT|G\n|root||phpuser||SHOW DATABASES|G\n|root||root|127.0.0.1|SHOW DATABASES|G\n|root||root|::1|SHOW DATABASES|G\n|root||root|localhost|SHOW DATABASES|G\n|root||phpuser||SHOW VIEW|G\n|root||root|127.0.0.1|SHOW VIEW|G\n|root||root|::1|SHOW VIEW|G\n|root||root|localhost|SHOW VIEW|G\n|root||phpuser||SHUTDOWN|G\n|root||root|127.0.0.1|SHUTDOWN|G\n|root||root|::1|SHUTDOWN|G\n|root||root|localhost|SHUTDOWN|G\n|root||phpuser||SUPER|G\n|root||root|127.0.0.1|SUPER|G\n|root||root|::1|SUPER|G\n|root||root|localhost|SUPER|G\n|root||phpuser||TRIGGER|G\n|root||root|127.0.0.1|TRIGGER|G\n|root||root|::1|TRIGGER|G\n|root||root|localhost|TRIGGER|G\n|root||phpuser||UPDATE|G\n|root||root|127.0.0.1|UPDATE|G\n|root||root|::1|UPDATE|G\n|root||root|localhost|UPDATE|G\n|root||phpuser||grant option|G\n|root||root|127.0.0.1|grant option|G\n|root||root|::1|grant option|G\n|root||root|localhost|grant option|G</Grants>\n      <ServerVersion>10.4.24</ServerVersion>\n    </root>\n    <collation id=\"2\" parent=\"1\" name=\"armscii8_bin\">\n      <Charset>armscii8</Charset>\n    </collation>\n    <collation id=\"3\" parent=\"1\" name=\"armscii8_general_ci\">\n      <Charset>armscii8</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"4\" parent=\"1\" name=\"armscii8_general_nopad_ci\">\n      <Charset>armscii8</Charset>\n    </collation>\n    <collation id=\"5\" parent=\"1\" name=\"armscii8_nopad_bin\">\n      <Charset>armscii8</Charset>\n    </collation>\n    <collation id=\"6\" parent=\"1\" name=\"ascii_bin\">\n      <Charset>ascii</Charset>\n    </collation>\n    <collation id=\"7\" parent=\"1\" name=\"ascii_general_ci\">\n      <Charset>ascii</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"8\" parent=\"1\" name=\"ascii_general_nopad_ci\">\n      <Charset>ascii</Charset>\n    </collation>\n    <collation id=\"9\" parent=\"1\" name=\"ascii_nopad_bin\">\n      <Charset>ascii</Charset>\n    </collation>\n    <collation id=\"10\" parent=\"1\" name=\"big5_bin\">\n      <Charset>big5</Charset>\n    </collation>\n    <collation id=\"11\" parent=\"1\" name=\"big5_chinese_ci\">\n      <Charset>big5</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"12\" parent=\"1\" name=\"big5_chinese_nopad_ci\">\n      <Charset>big5</Charset>\n    </collation>\n    <collation id=\"13\" parent=\"1\" name=\"big5_nopad_bin\">\n      <Charset>big5</Charset>\n    </collation>\n    <collation id=\"14\" parent=\"1\" name=\"binary\">\n      <Charset>binary</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"15\" parent=\"1\" name=\"cp1250_bin\">\n      <Charset>cp1250</Charset>\n    </collation>\n    <collation id=\"16\" parent=\"1\" name=\"cp1250_croatian_ci\">\n      <Charset>cp1250</Charset>\n    </collation>\n    <collation id=\"17\" parent=\"1\" name=\"cp1250_czech_cs\">\n      <Charset>cp1250</Charset>\n    </collation>\n    <collation id=\"18\" parent=\"1\" name=\"cp1250_general_ci\">\n      <Charset>cp1250</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"19\" parent=\"1\" name=\"cp1250_general_nopad_ci\">\n      <Charset>cp1250</Charset>\n    </collation>\n    <collation id=\"20\" parent=\"1\" name=\"cp1250_nopad_bin\">\n      <Charset>cp1250</Charset>\n    </collation>\n    <collation id=\"21\" parent=\"1\" name=\"cp1250_polish_ci\">\n      <Charset>cp1250</Charset>\n    </collation>\n    <collation id=\"22\" parent=\"1\" name=\"cp1251_bin\">\n      <Charset>cp1251</Charset>\n    </collation>\n    <collation id=\"23\" parent=\"1\" name=\"cp1251_bulgarian_ci\">\n      <Charset>cp1251</Charset>\n    </collation>\n    <collation id=\"24\" parent=\"1\" name=\"cp1251_general_ci\">\n      <Charset>cp1251</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"25\" parent=\"1\" name=\"cp1251_general_cs\">\n      <Charset>cp1251</Charset>\n    </collation>\n    <collation id=\"26\" parent=\"1\" name=\"cp1251_general_nopad_ci\">\n      <Charset>cp1251</Charset>\n    </collation>\n    <collation id=\"27\" parent=\"1\" name=\"cp1251_nopad_bin\">\n      <Charset>cp1251</Charset>\n    </collation>\n    <collation id=\"28\" parent=\"1\" name=\"cp1251_ukrainian_ci\">\n      <Charset>cp1251</Charset>\n    </collation>\n    <collation id=\"29\" parent=\"1\" name=\"cp1256_bin\">\n      <Charset>cp1256</Charset>\n    </collation>\n    <collation id=\"30\" parent=\"1\" name=\"cp1256_general_ci\">\n      <Charset>cp1256</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"31\" parent=\"1\" name=\"cp1256_general_nopad_ci\">\n      <Charset>cp1256</Charset>\n    </collation>\n    <collation id=\"32\" parent=\"1\" name=\"cp1256_nopad_bin\">\n      <Charset>cp1256</Charset>\n    </collation>\n    <collation id=\"33\" parent=\"1\" name=\"cp1257_bin\">\n      <Charset>cp1257</Charset>\n    </collation>\n    <collation id=\"34\" parent=\"1\" name=\"cp1257_general_ci\">\n      <Charset>cp1257</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"35\" parent=\"1\" name=\"cp1257_general_nopad_ci\">\n      <Charset>cp1257</Charset>\n    </collation>\n    <collation id=\"36\" parent=\"1\" name=\"cp1257_lithuanian_ci\">\n      <Charset>cp1257</Charset>\n    </collation>\n    <collation id=\"37\" parent=\"1\" name=\"cp1257_nopad_bin\">\n      <Charset>cp1257</Charset>\n    </collation>\n    <collation id=\"38\" parent=\"1\" name=\"cp850_bin\">\n      <Charset>cp850</Charset>\n    </collation>\n    <collation id=\"39\" parent=\"1\" name=\"cp850_general_ci\">\n      <Charset>cp850</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"40\" parent=\"1\" name=\"cp850_general_nopad_ci\">\n      <Charset>cp850</Charset>\n    </collation>\n    <collation id=\"41\" parent=\"1\" name=\"cp850_nopad_bin\">\n      <Charset>cp850</Charset>\n    </collation>\n    <collation id=\"42\" parent=\"1\" name=\"cp852_bin\">\n      <Charset>cp852</Charset>\n    </collation>\n    <collation id=\"43\" parent=\"1\" name=\"cp852_general_ci\">\n      <Charset>cp852</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"44\" parent=\"1\" name=\"cp852_general_nopad_ci\">\n      <Charset>cp852</Charset>\n    </collation>\n    <collation id=\"45\" parent=\"1\" name=\"cp852_nopad_bin\">\n      <Charset>cp852</Charset>\n    </collation>\n    <collation id=\"46\" parent=\"1\" name=\"cp866_bin\">\n      <Charset>cp866</Charset>\n    </collation>\n    <collation id=\"47\" parent=\"1\" name=\"cp866_general_ci\">\n      <Charset>cp866</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"48\" parent=\"1\" name=\"cp866_general_nopad_ci\">\n      <Charset>cp866</Charset>\n    </collation>\n    <collation id=\"49\" parent=\"1\" name=\"cp866_nopad_bin\">\n      <Charset>cp866</Charset>\n    </collation>\n    <collation id=\"50\" parent=\"1\" name=\"cp932_bin\">\n      <Charset>cp932</Charset>\n    </collation>\n    <collation id=\"51\" parent=\"1\" name=\"cp932_japanese_ci\">\n      <Charset>cp932</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"52\" parent=\"1\" name=\"cp932_japanese_nopad_ci\">\n      <Charset>cp932</Charset>\n    </collation>\n    <collation id=\"53\" parent=\"1\" name=\"cp932_nopad_bin\">\n      <Charset>cp932</Charset>\n    </collation>\n    <collation id=\"54\" parent=\"1\" name=\"dec8_bin\">\n      <Charset>dec8</Charset>\n    </collation>\n    <collation id=\"55\" parent=\"1\" name=\"dec8_nopad_bin\">\n      <Charset>dec8</Charset>\n    </collation>\n    <collation id=\"56\" parent=\"1\" name=\"dec8_swedish_ci\">\n      <Charset>dec8</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"57\" parent=\"1\" name=\"dec8_swedish_nopad_ci\">\n      <Charset>dec8</Charset>\n    </collation>\n    <collation id=\"58\" parent=\"1\" name=\"eucjpms_bin\">\n      <Charset>eucjpms</Charset>\n    </collation>\n    <collation id=\"59\" parent=\"1\" name=\"eucjpms_japanese_ci\">\n      <Charset>eucjpms</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"60\" parent=\"1\" name=\"eucjpms_japanese_nopad_ci\">\n      <Charset>eucjpms</Charset>\n    </collation>\n    <collation id=\"61\" parent=\"1\" name=\"eucjpms_nopad_bin\">\n      <Charset>eucjpms</Charset>\n    </collation>\n    <collation id=\"62\" parent=\"1\" name=\"euckr_bin\">\n      <Charset>euckr</Charset>\n    </collation>\n    <collation id=\"63\" parent=\"1\" name=\"euckr_korean_ci\">\n      <Charset>euckr</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"64\" parent=\"1\" name=\"euckr_korean_nopad_ci\">\n      <Charset>euckr</Charset>\n    </collation>\n    <collation id=\"65\" parent=\"1\" name=\"euckr_nopad_bin\">\n      <Charset>euckr</Charset>\n    </collation>\n    <collation id=\"66\" parent=\"1\" name=\"gb2312_bin\">\n      <Charset>gb2312</Charset>\n    </collation>\n    <collation id=\"67\" parent=\"1\" name=\"gb2312_chinese_ci\">\n      <Charset>gb2312</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"68\" parent=\"1\" name=\"gb2312_chinese_nopad_ci\">\n      <Charset>gb2312</Charset>\n    </collation>\n    <collation id=\"69\" parent=\"1\" name=\"gb2312_nopad_bin\">\n      <Charset>gb2312</Charset>\n    </collation>\n    <collation id=\"70\" parent=\"1\" name=\"gbk_bin\">\n      <Charset>gbk</Charset>\n    </collation>\n    <collation id=\"71\" parent=\"1\" name=\"gbk_chinese_ci\">\n      <Charset>gbk</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"72\" parent=\"1\" name=\"gbk_chinese_nopad_ci\">\n      <Charset>gbk</Charset>\n    </collation>\n    <collation id=\"73\" parent=\"1\" name=\"gbk_nopad_bin\">\n      <Charset>gbk</Charset>\n    </collation>\n    <collation id=\"74\" parent=\"1\" name=\"geostd8_bin\">\n      <Charset>geostd8</Charset>\n    </collation>\n    <collation id=\"75\" parent=\"1\" name=\"geostd8_general_ci\">\n      <Charset>geostd8</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"76\" parent=\"1\" name=\"geostd8_general_nopad_ci\">\n      <Charset>geostd8</Charset>\n    </collation>\n    <collation id=\"77\" parent=\"1\" name=\"geostd8_nopad_bin\">\n      <Charset>geostd8</Charset>\n    </collation>\n    <collation id=\"78\" parent=\"1\" name=\"greek_bin\">\n      <Charset>greek</Charset>\n    </collation>\n    <collation id=\"79\" parent=\"1\" name=\"greek_general_ci\">\n      <Charset>greek</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"80\" parent=\"1\" name=\"greek_general_nopad_ci\">\n      <Charset>greek</Charset>\n    </collation>\n    <collation id=\"81\" parent=\"1\" name=\"greek_nopad_bin\">\n      <Charset>greek</Charset>\n    </collation>\n    <collation id=\"82\" parent=\"1\" name=\"hebrew_bin\">\n      <Charset>hebrew</Charset>\n    </collation>\n    <collation id=\"83\" parent=\"1\" name=\"hebrew_general_ci\">\n      <Charset>hebrew</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"84\" parent=\"1\" name=\"hebrew_general_nopad_ci\">\n      <Charset>hebrew</Charset>\n    </collation>\n    <collation id=\"85\" parent=\"1\" name=\"hebrew_nopad_bin\">\n      <Charset>hebrew</Charset>\n    </collation>\n    <collation id=\"86\" parent=\"1\" name=\"hp8_bin\">\n      <Charset>hp8</Charset>\n    </collation>\n    <collation id=\"87\" parent=\"1\" name=\"hp8_english_ci\">\n      <Charset>hp8</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"88\" parent=\"1\" name=\"hp8_english_nopad_ci\">\n      <Charset>hp8</Charset>\n    </collation>\n    <collation id=\"89\" parent=\"1\" name=\"hp8_nopad_bin\">\n      <Charset>hp8</Charset>\n    </collation>\n    <collation id=\"90\" parent=\"1\" name=\"keybcs2_bin\">\n      <Charset>keybcs2</Charset>\n    </collation>\n    <collation id=\"91\" parent=\"1\" name=\"keybcs2_general_ci\">\n      <Charset>keybcs2</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"92\" parent=\"1\" name=\"keybcs2_general_nopad_ci\">\n      <Charset>keybcs2</Charset>\n    </collation>\n    <collation id=\"93\" parent=\"1\" name=\"keybcs2_nopad_bin\">\n      <Charset>keybcs2</Charset>\n    </collation>\n    <collation id=\"94\" parent=\"1\" name=\"koi8r_bin\">\n      <Charset>koi8r</Charset>\n    </collation>\n    <collation id=\"95\" parent=\"1\" name=\"koi8r_general_ci\">\n      <Charset>koi8r</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"96\" parent=\"1\" name=\"koi8r_general_nopad_ci\">\n      <Charset>koi8r</Charset>\n    </collation>\n    <collation id=\"97\" parent=\"1\" name=\"koi8r_nopad_bin\">\n      <Charset>koi8r</Charset>\n    </collation>\n    <collation id=\"98\" parent=\"1\" name=\"koi8u_bin\">\n      <Charset>koi8u</Charset>\n    </collation>\n    <collation id=\"99\" parent=\"1\" name=\"koi8u_general_ci\">\n      <Charset>koi8u</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"100\" parent=\"1\" name=\"koi8u_general_nopad_ci\">\n      <Charset>koi8u</Charset>\n    </collation>\n    <collation id=\"101\" parent=\"1\" name=\"koi8u_nopad_bin\">\n      <Charset>koi8u</Charset>\n    </collation>\n    <collation id=\"102\" parent=\"1\" name=\"latin1_bin\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"103\" parent=\"1\" name=\"latin1_danish_ci\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"104\" parent=\"1\" name=\"latin1_general_ci\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"105\" parent=\"1\" name=\"latin1_general_cs\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"106\" parent=\"1\" name=\"latin1_german1_ci\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"107\" parent=\"1\" name=\"latin1_german2_ci\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"108\" parent=\"1\" name=\"latin1_nopad_bin\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"109\" parent=\"1\" name=\"latin1_spanish_ci\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"110\" parent=\"1\" name=\"latin1_swedish_ci\">\n      <Charset>latin1</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"111\" parent=\"1\" name=\"latin1_swedish_nopad_ci\">\n      <Charset>latin1</Charset>\n    </collation>\n    <collation id=\"112\" parent=\"1\" name=\"latin2_bin\">\n      <Charset>latin2</Charset>\n    </collation>\n    <collation id=\"113\" parent=\"1\" name=\"latin2_croatian_ci\">\n      <Charset>latin2</Charset>\n    </collation>\n    <collation id=\"114\" parent=\"1\" name=\"latin2_czech_cs\">\n      <Charset>latin2</Charset>\n    </collation>\n    <collation id=\"115\" parent=\"1\" name=\"latin2_general_ci\">\n      <Charset>latin2</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"116\" parent=\"1\" name=\"latin2_general_nopad_ci\">\n      <Charset>latin2</Charset>\n    </collation>\n    <collation id=\"117\" parent=\"1\" name=\"latin2_hungarian_ci\">\n      <Charset>latin2</Charset>\n    </collation>\n    <collation id=\"118\" parent=\"1\" name=\"latin2_nopad_bin\">\n      <Charset>latin2</Charset>\n    </collation>\n    <collation id=\"119\" parent=\"1\" name=\"latin5_bin\">\n      <Charset>latin5</Charset>\n    </collation>\n    <collation id=\"120\" parent=\"1\" name=\"latin5_nopad_bin\">\n      <Charset>latin5</Charset>\n    </collation>\n    <collation id=\"121\" parent=\"1\" name=\"latin5_turkish_ci\">\n      <Charset>latin5</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"122\" parent=\"1\" name=\"latin5_turkish_nopad_ci\">\n      <Charset>latin5</Charset>\n    </collation>\n    <collation id=\"123\" parent=\"1\" name=\"latin7_bin\">\n      <Charset>latin7</Charset>\n    </collation>\n    <collation id=\"124\" parent=\"1\" name=\"latin7_estonian_cs\">\n      <Charset>latin7</Charset>\n    </collation>\n    <collation id=\"125\" parent=\"1\" name=\"latin7_general_ci\">\n      <Charset>latin7</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"126\" parent=\"1\" name=\"latin7_general_cs\">\n      <Charset>latin7</Charset>\n    </collation>\n    <collation id=\"127\" parent=\"1\" name=\"latin7_general_nopad_ci\">\n      <Charset>latin7</Charset>\n    </collation>\n    <collation id=\"128\" parent=\"1\" name=\"latin7_nopad_bin\">\n      <Charset>latin7</Charset>\n    </collation>\n    <collation id=\"129\" parent=\"1\" name=\"macce_bin\">\n      <Charset>macce</Charset>\n    </collation>\n    <collation id=\"130\" parent=\"1\" name=\"macce_general_ci\">\n      <Charset>macce</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"131\" parent=\"1\" name=\"macce_general_nopad_ci\">\n      <Charset>macce</Charset>\n    </collation>\n    <collation id=\"132\" parent=\"1\" name=\"macce_nopad_bin\">\n      <Charset>macce</Charset>\n    </collation>\n    <collation id=\"133\" parent=\"1\" name=\"macroman_bin\">\n      <Charset>macroman</Charset>\n    </collation>\n    <collation id=\"134\" parent=\"1\" name=\"macroman_general_ci\">\n      <Charset>macroman</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"135\" parent=\"1\" name=\"macroman_general_nopad_ci\">\n      <Charset>macroman</Charset>\n    </collation>\n    <collation id=\"136\" parent=\"1\" name=\"macroman_nopad_bin\">\n      <Charset>macroman</Charset>\n    </collation>\n    <collation id=\"137\" parent=\"1\" name=\"sjis_bin\">\n      <Charset>sjis</Charset>\n    </collation>\n    <collation id=\"138\" parent=\"1\" name=\"sjis_japanese_ci\">\n      <Charset>sjis</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"139\" parent=\"1\" name=\"sjis_japanese_nopad_ci\">\n      <Charset>sjis</Charset>\n    </collation>\n    <collation id=\"140\" parent=\"1\" name=\"sjis_nopad_bin\">\n      <Charset>sjis</Charset>\n    </collation>\n    <collation id=\"141\" parent=\"1\" name=\"swe7_bin\">\n      <Charset>swe7</Charset>\n    </collation>\n    <collation id=\"142\" parent=\"1\" name=\"swe7_nopad_bin\">\n      <Charset>swe7</Charset>\n    </collation>\n    <collation id=\"143\" parent=\"1\" name=\"swe7_swedish_ci\">\n      <Charset>swe7</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"144\" parent=\"1\" name=\"swe7_swedish_nopad_ci\">\n      <Charset>swe7</Charset>\n    </collation>\n    <collation id=\"145\" parent=\"1\" name=\"tis620_bin\">\n      <Charset>tis620</Charset>\n    </collation>\n    <collation id=\"146\" parent=\"1\" name=\"tis620_nopad_bin\">\n      <Charset>tis620</Charset>\n    </collation>\n    <collation id=\"147\" parent=\"1\" name=\"tis620_thai_ci\">\n      <Charset>tis620</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"148\" parent=\"1\" name=\"tis620_thai_nopad_ci\">\n      <Charset>tis620</Charset>\n    </collation>\n    <collation id=\"149\" parent=\"1\" name=\"ucs2_bin\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"150\" parent=\"1\" name=\"ucs2_croatian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"151\" parent=\"1\" name=\"ucs2_croatian_mysql561_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"152\" parent=\"1\" name=\"ucs2_czech_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"153\" parent=\"1\" name=\"ucs2_danish_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"154\" parent=\"1\" name=\"ucs2_esperanto_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"155\" parent=\"1\" name=\"ucs2_estonian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"156\" parent=\"1\" name=\"ucs2_general_ci\">\n      <Charset>ucs2</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"157\" parent=\"1\" name=\"ucs2_general_mysql500_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"158\" parent=\"1\" name=\"ucs2_general_nopad_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"159\" parent=\"1\" name=\"ucs2_german2_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"160\" parent=\"1\" name=\"ucs2_hungarian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"161\" parent=\"1\" name=\"ucs2_icelandic_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"162\" parent=\"1\" name=\"ucs2_latvian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"163\" parent=\"1\" name=\"ucs2_lithuanian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"164\" parent=\"1\" name=\"ucs2_myanmar_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"165\" parent=\"1\" name=\"ucs2_nopad_bin\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"166\" parent=\"1\" name=\"ucs2_persian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"167\" parent=\"1\" name=\"ucs2_polish_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"168\" parent=\"1\" name=\"ucs2_roman_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"169\" parent=\"1\" name=\"ucs2_romanian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"170\" parent=\"1\" name=\"ucs2_sinhala_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"171\" parent=\"1\" name=\"ucs2_slovak_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"172\" parent=\"1\" name=\"ucs2_slovenian_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"173\" parent=\"1\" name=\"ucs2_spanish2_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"174\" parent=\"1\" name=\"ucs2_spanish_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"175\" parent=\"1\" name=\"ucs2_swedish_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"176\" parent=\"1\" name=\"ucs2_thai_520_w2\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"177\" parent=\"1\" name=\"ucs2_turkish_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"178\" parent=\"1\" name=\"ucs2_unicode_520_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"179\" parent=\"1\" name=\"ucs2_unicode_520_nopad_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"180\" parent=\"1\" name=\"ucs2_unicode_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"181\" parent=\"1\" name=\"ucs2_unicode_nopad_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"182\" parent=\"1\" name=\"ucs2_vietnamese_ci\">\n      <Charset>ucs2</Charset>\n    </collation>\n    <collation id=\"183\" parent=\"1\" name=\"ujis_bin\">\n      <Charset>ujis</Charset>\n    </collation>\n    <collation id=\"184\" parent=\"1\" name=\"ujis_japanese_ci\">\n      <Charset>ujis</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"185\" parent=\"1\" name=\"ujis_japanese_nopad_ci\">\n      <Charset>ujis</Charset>\n    </collation>\n    <collation id=\"186\" parent=\"1\" name=\"ujis_nopad_bin\">\n      <Charset>ujis</Charset>\n    </collation>\n    <collation id=\"187\" parent=\"1\" name=\"utf16_bin\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"188\" parent=\"1\" name=\"utf16_croatian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"189\" parent=\"1\" name=\"utf16_croatian_mysql561_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"190\" parent=\"1\" name=\"utf16_czech_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"191\" parent=\"1\" name=\"utf16_danish_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"192\" parent=\"1\" name=\"utf16_esperanto_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"193\" parent=\"1\" name=\"utf16_estonian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"194\" parent=\"1\" name=\"utf16_general_ci\">\n      <Charset>utf16</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"195\" parent=\"1\" name=\"utf16_general_nopad_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"196\" parent=\"1\" name=\"utf16_german2_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"197\" parent=\"1\" name=\"utf16_hungarian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"198\" parent=\"1\" name=\"utf16_icelandic_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"199\" parent=\"1\" name=\"utf16_latvian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"200\" parent=\"1\" name=\"utf16_lithuanian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"201\" parent=\"1\" name=\"utf16_myanmar_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"202\" parent=\"1\" name=\"utf16_nopad_bin\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"203\" parent=\"1\" name=\"utf16_persian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"204\" parent=\"1\" name=\"utf16_polish_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"205\" parent=\"1\" name=\"utf16_roman_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"206\" parent=\"1\" name=\"utf16_romanian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"207\" parent=\"1\" name=\"utf16_sinhala_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"208\" parent=\"1\" name=\"utf16_slovak_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"209\" parent=\"1\" name=\"utf16_slovenian_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"210\" parent=\"1\" name=\"utf16_spanish2_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"211\" parent=\"1\" name=\"utf16_spanish_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"212\" parent=\"1\" name=\"utf16_swedish_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"213\" parent=\"1\" name=\"utf16_thai_520_w2\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"214\" parent=\"1\" name=\"utf16_turkish_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"215\" parent=\"1\" name=\"utf16_unicode_520_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"216\" parent=\"1\" name=\"utf16_unicode_520_nopad_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"217\" parent=\"1\" name=\"utf16_unicode_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"218\" parent=\"1\" name=\"utf16_unicode_nopad_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"219\" parent=\"1\" name=\"utf16_vietnamese_ci\">\n      <Charset>utf16</Charset>\n    </collation>\n    <collation id=\"220\" parent=\"1\" name=\"utf16le_bin\">\n      <Charset>utf16le</Charset>\n    </collation>\n    <collation id=\"221\" parent=\"1\" name=\"utf16le_general_ci\">\n      <Charset>utf16le</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"222\" parent=\"1\" name=\"utf16le_general_nopad_ci\">\n      <Charset>utf16le</Charset>\n    </collation>\n    <collation id=\"223\" parent=\"1\" name=\"utf16le_nopad_bin\">\n      <Charset>utf16le</Charset>\n    </collation>\n    <collation id=\"224\" parent=\"1\" name=\"utf32_bin\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"225\" parent=\"1\" name=\"utf32_croatian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"226\" parent=\"1\" name=\"utf32_croatian_mysql561_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"227\" parent=\"1\" name=\"utf32_czech_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"228\" parent=\"1\" name=\"utf32_danish_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"229\" parent=\"1\" name=\"utf32_esperanto_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"230\" parent=\"1\" name=\"utf32_estonian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"231\" parent=\"1\" name=\"utf32_general_ci\">\n      <Charset>utf32</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"232\" parent=\"1\" name=\"utf32_general_nopad_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"233\" parent=\"1\" name=\"utf32_german2_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"234\" parent=\"1\" name=\"utf32_hungarian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"235\" parent=\"1\" name=\"utf32_icelandic_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"236\" parent=\"1\" name=\"utf32_latvian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"237\" parent=\"1\" name=\"utf32_lithuanian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"238\" parent=\"1\" name=\"utf32_myanmar_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"239\" parent=\"1\" name=\"utf32_nopad_bin\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"240\" parent=\"1\" name=\"utf32_persian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"241\" parent=\"1\" name=\"utf32_polish_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"242\" parent=\"1\" name=\"utf32_roman_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"243\" parent=\"1\" name=\"utf32_romanian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"244\" parent=\"1\" name=\"utf32_sinhala_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"245\" parent=\"1\" name=\"utf32_slovak_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"246\" parent=\"1\" name=\"utf32_slovenian_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"247\" parent=\"1\" name=\"utf32_spanish2_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"248\" parent=\"1\" name=\"utf32_spanish_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"249\" parent=\"1\" name=\"utf32_swedish_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"250\" parent=\"1\" name=\"utf32_thai_520_w2\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"251\" parent=\"1\" name=\"utf32_turkish_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"252\" parent=\"1\" name=\"utf32_unicode_520_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"253\" parent=\"1\" name=\"utf32_unicode_520_nopad_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"254\" parent=\"1\" name=\"utf32_unicode_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"255\" parent=\"1\" name=\"utf32_unicode_nopad_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"256\" parent=\"1\" name=\"utf32_vietnamese_ci\">\n      <Charset>utf32</Charset>\n    </collation>\n    <collation id=\"257\" parent=\"1\" name=\"utf8_bin\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"258\" parent=\"1\" name=\"utf8_croatian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"259\" parent=\"1\" name=\"utf8_croatian_mysql561_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"260\" parent=\"1\" name=\"utf8_czech_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"261\" parent=\"1\" name=\"utf8_danish_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"262\" parent=\"1\" name=\"utf8_esperanto_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"263\" parent=\"1\" name=\"utf8_estonian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"264\" parent=\"1\" name=\"utf8_general_ci\">\n      <Charset>utf8</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"265\" parent=\"1\" name=\"utf8_general_mysql500_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"266\" parent=\"1\" name=\"utf8_general_nopad_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"267\" parent=\"1\" name=\"utf8_german2_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"268\" parent=\"1\" name=\"utf8_hungarian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"269\" parent=\"1\" name=\"utf8_icelandic_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"270\" parent=\"1\" name=\"utf8_latvian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"271\" parent=\"1\" name=\"utf8_lithuanian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"272\" parent=\"1\" name=\"utf8_myanmar_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"273\" parent=\"1\" name=\"utf8_nopad_bin\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"274\" parent=\"1\" name=\"utf8_persian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"275\" parent=\"1\" name=\"utf8_polish_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"276\" parent=\"1\" name=\"utf8_roman_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"277\" parent=\"1\" name=\"utf8_romanian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"278\" parent=\"1\" name=\"utf8_sinhala_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"279\" parent=\"1\" name=\"utf8_slovak_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"280\" parent=\"1\" name=\"utf8_slovenian_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"281\" parent=\"1\" name=\"utf8_spanish2_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"282\" parent=\"1\" name=\"utf8_spanish_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"283\" parent=\"1\" name=\"utf8_swedish_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"284\" parent=\"1\" name=\"utf8_thai_520_w2\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"285\" parent=\"1\" name=\"utf8_turkish_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"286\" parent=\"1\" name=\"utf8_unicode_520_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"287\" parent=\"1\" name=\"utf8_unicode_520_nopad_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"288\" parent=\"1\" name=\"utf8_unicode_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"289\" parent=\"1\" name=\"utf8_unicode_nopad_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"290\" parent=\"1\" name=\"utf8_vietnamese_ci\">\n      <Charset>utf8</Charset>\n    </collation>\n    <collation id=\"291\" parent=\"1\" name=\"utf8mb4_bin\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"292\" parent=\"1\" name=\"utf8mb4_croatian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"293\" parent=\"1\" name=\"utf8mb4_croatian_mysql561_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"294\" parent=\"1\" name=\"utf8mb4_czech_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"295\" parent=\"1\" name=\"utf8mb4_danish_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"296\" parent=\"1\" name=\"utf8mb4_esperanto_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"297\" parent=\"1\" name=\"utf8mb4_estonian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"298\" parent=\"1\" name=\"utf8mb4_general_ci\">\n      <Charset>utf8mb4</Charset>\n      <DefaultForCharset>1</DefaultForCharset>\n    </collation>\n    <collation id=\"299\" parent=\"1\" name=\"utf8mb4_general_nopad_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"300\" parent=\"1\" name=\"utf8mb4_german2_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"301\" parent=\"1\" name=\"utf8mb4_hungarian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"302\" parent=\"1\" name=\"utf8mb4_icelandic_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"303\" parent=\"1\" name=\"utf8mb4_latvian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"304\" parent=\"1\" name=\"utf8mb4_lithuanian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"305\" parent=\"1\" name=\"utf8mb4_myanmar_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"306\" parent=\"1\" name=\"utf8mb4_nopad_bin\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"307\" parent=\"1\" name=\"utf8mb4_persian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"308\" parent=\"1\" name=\"utf8mb4_polish_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"309\" parent=\"1\" name=\"utf8mb4_roman_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"310\" parent=\"1\" name=\"utf8mb4_romanian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"311\" parent=\"1\" name=\"utf8mb4_sinhala_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"312\" parent=\"1\" name=\"utf8mb4_slovak_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"313\" parent=\"1\" name=\"utf8mb4_slovenian_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"314\" parent=\"1\" name=\"utf8mb4_spanish2_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"315\" parent=\"1\" name=\"utf8mb4_spanish_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"316\" parent=\"1\" name=\"utf8mb4_swedish_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"317\" parent=\"1\" name=\"utf8mb4_thai_520_w2\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"318\" parent=\"1\" name=\"utf8mb4_turkish_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"319\" parent=\"1\" name=\"utf8mb4_unicode_520_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"320\" parent=\"1\" name=\"utf8mb4_unicode_520_nopad_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"321\" parent=\"1\" name=\"utf8mb4_unicode_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"322\" parent=\"1\" name=\"utf8mb4_unicode_nopad_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <collation id=\"323\" parent=\"1\" name=\"utf8mb4_vietnamese_ci\">\n      <Charset>utf8mb4</Charset>\n    </collation>\n    <schema id=\"324\" parent=\"1\" name=\"books_i425\">\n      <Current>1</Current>\n      <CollationName>utf8mb4_general_ci</CollationName>\n    </schema>\n    <schema id=\"325\" parent=\"1\" name=\"information_schema\">\n      <CollationName>utf8_general_ci</CollationName>\n    </schema>\n    <schema id=\"326\" parent=\"1\" name=\"mycollege_db\">\n      <CollationName>utf8mb4_general_ci</CollationName>\n    </schema>\n    <schema id=\"327\" parent=\"1\" name=\"mysql\">\n      <CollationName>utf8mb4_general_ci</CollationName>\n    </schema>\n    <schema id=\"328\" parent=\"1\" name=\"performance_schema\">\n      <CollationName>utf8_general_ci</CollationName>\n    </schema>\n    <schema id=\"329\" parent=\"1\" name=\"phpmyadmin\">\n      <CollationName>utf8_bin</CollationName>\n    </schema>\n    <schema id=\"330\" parent=\"1\" name=\"phpuser\">\n      <CollationName>utf8mb4_general_ci</CollationName>\n    </schema>\n    <schema id=\"331\" parent=\"1\" name=\"test\">\n      <CollationName>latin1_swedish_ci</CollationName>\n    </schema>\n    <user id=\"332\" parent=\"1\" name=\"phpuser\"/>\n    <user id=\"333\" parent=\"1\" name=\"pma\">\n      <Host>localhost</Host>\n    </user>\n    <user id=\"334\" parent=\"1\" name=\"root\">\n      <Host>127.0.0.1</Host>\n    </user>\n    <user id=\"335\" parent=\"1\" name=\"root\">\n      <Host>::1</Host>\n    </user>\n    <user id=\"336\" parent=\"1\" name=\"root\">\n      <Host>localhost</Host>\n    </user>\n    <table id=\"337\" parent=\"324\" name=\"author_and_book\">\n      <Engine>InnoDB</Engine>\n      <CollationName>utf8mb4_general_ci</CollationName>\n    </table>\n    <table id=\"338\" parent=\"324\" name=\"authors\">\n      <Engine>InnoDB</Engine>\n      <CollationName>latin1_swedish_ci</CollationName>\n    </table>\n    <table id=\"339\" parent=\"324\" name=\"books\">\n      <Engine>InnoDB</Engine>\n      <CollationName>latin1_swedish_ci</CollationName>\n    </table>\n    <table id=\"340\" parent=\"324\" name=\"genres\">\n      <Engine>InnoDB</Engine>\n      <CollationName>latin1_swedish_ci</CollationName>\n    </table>\n    <table id=\"341\" parent=\"324\" name=\"publisher\">\n      <Engine>InnoDB</Engine>\n      <CollationName>latin1_swedish_ci</CollationName>\n    </table>\n    <table id=\"342\" parent=\"324\" name=\"ratings\">\n      <Engine>InnoDB</Engine>\n      <CollationName>utf8mb4_general_ci</CollationName>\n    </table>\n    <column id=\"343\" parent=\"337\" name=\"author_book_id\">\n      <AutoIncrement>23</AutoIncrement>\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>1</Position>\n    </column>\n    <column id=\"344\" parent=\"337\" name=\"book_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>2</Position>\n    </column>\n    <column id=\"345\" parent=\"337\" name=\"author_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>3</Position>\n    </column>\n    <foreign-key id=\"346\" parent=\"337\" name=\"author_and_book_ibfk_2\">\n      <ColNames>book_id</ColNames>\n      <OnUpdate>cascade</OnUpdate>\n      <RefColNames>book_id</RefColNames>\n      <RefTableName>books</RefTableName>\n    </foreign-key>\n    <foreign-key id=\"347\" parent=\"337\" name=\"author_and_book_ibfk_1\">\n      <ColNames>author_id</ColNames>\n      <RefColNames>author_id</RefColNames>\n      <RefTableName>authors</RefTableName>\n    </foreign-key>\n    <index id=\"348\" parent=\"337\" name=\"book_id\">\n      <ColNames>book_id\nauthor_id</ColNames>\n      <Type>btree</Type>\n    </index>\n    <index id=\"349\" parent=\"337\" name=\"author_id\">\n      <ColNames>author_id</ColNames>\n      <Type>btree</Type>\n    </index>\n    <key id=\"350\" parent=\"337\" name=\"PRIMARY\">\n      <ColNames>author_book_id</ColNames>\n      <NameSurrogate>1</NameSurrogate>\n      <Primary>1</Primary>\n    </key>\n    <column id=\"351\" parent=\"338\" name=\"author_id\">\n      <AutoIncrement>23</AutoIncrement>\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>1</Position>\n    </column>\n    <column id=\"352\" parent=\"338\" name=\"firstname\">\n      <DataType>varchar(20)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>2</Position>\n    </column>\n    <column id=\"353\" parent=\"338\" name=\"lastname\">\n      <DataType>varchar(20)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>3</Position>\n    </column>\n    <key id=\"354\" parent=\"338\" name=\"PRIMARY\">\n      <ColNames>author_id</ColNames>\n      <NameSurrogate>1</NameSurrogate>\n      <Primary>1</Primary>\n    </key>\n    <column id=\"355\" parent=\"339\" name=\"book_id\">\n      <AutoIncrement>21</AutoIncrement>\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>1</Position>\n    </column>\n    <column id=\"356\" parent=\"339\" name=\"title\">\n      <DataType>varchar(120)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>2</Position>\n    </column>\n    <column id=\"357\" parent=\"339\" name=\"isbn\">\n      <DataType>varchar(15)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>3</Position>\n    </column>\n    <column id=\"358\" parent=\"339\" name=\"author_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>4</Position>\n    </column>\n    <column id=\"359\" parent=\"339\" name=\"publisher_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>5</Position>\n    </column>\n    <column id=\"360\" parent=\"339\" name=\"price\">\n      <DataType>decimal(5,2 digit)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>6</Position>\n    </column>\n    <column id=\"361\" parent=\"339\" name=\"description\">\n      <DataType>text|0s</DataType>\n      <Position>7</Position>\n    </column>\n    <column id=\"362\" parent=\"339\" name=\"image\">\n      <DataType>varchar(120)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>8</Position>\n    </column>\n    <column id=\"363\" parent=\"339\" name=\"genre_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>9</Position>\n    </column>\n    <column id=\"364\" parent=\"339\" name=\"rating_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>10</Position>\n    </column>\n    <foreign-key id=\"365\" parent=\"339\" name=\"books_ibfk_2\">\n      <ColNames>publisher_id</ColNames>\n      <RefColNames>publisher_id</RefColNames>\n      <RefTableName>publisher</RefTableName>\n    </foreign-key>\n    <foreign-key id=\"366\" parent=\"339\" name=\"books_ibfk_3\">\n      <ColNames>genre_id</ColNames>\n      <RefColNames>genreID</RefColNames>\n      <RefTableName>genres</RefTableName>\n    </foreign-key>\n    <foreign-key id=\"367\" parent=\"339\" name=\"books_ibfk_4\">\n      <ColNames>rating_id</ColNames>\n      <RefColNames>rating_id</RefColNames>\n      <RefTableName>ratings</RefTableName>\n    </foreign-key>\n    <index id=\"368\" parent=\"339\" name=\"publisher_id\">\n      <ColNames>publisher_id</ColNames>\n      <Type>btree</Type>\n      <Unique>1</Unique>\n    </index>\n    <index id=\"369\" parent=\"339\" name=\"author_id\">\n      <ColNames>author_id\ngenre_id</ColNames>\n      <Type>btree</Type>\n    </index>\n    <index id=\"370\" parent=\"339\" name=\"genre_id\">\n      <ColNames>genre_id</ColNames>\n      <Type>btree</Type>\n    </index>\n    <index id=\"371\" parent=\"339\" name=\"rating_id\">\n      <ColNames>rating_id</ColNames>\n      <Type>btree</Type>\n    </index>\n    <key id=\"372\" parent=\"339\" name=\"PRIMARY\">\n      <ColNames>book_id</ColNames>\n      <NameSurrogate>1</NameSurrogate>\n      <Primary>1</Primary>\n    </key>\n    <key id=\"373\" parent=\"339\" name=\"publisher_id\">\n      <ColNames>publisher_id</ColNames>\n      <UnderlyingIndexName>publisher_id</UnderlyingIndexName>\n    </key>\n    <column id=\"374\" parent=\"340\" name=\"genreID\">\n      <AutoIncrement>13</AutoIncrement>\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>1</Position>\n    </column>\n    <column id=\"375\" parent=\"340\" name=\"fiction_nonfiction\">\n      <DataType>varchar(20)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>2</Position>\n    </column>\n    <column id=\"376\" parent=\"340\" name=\"genre_name\">\n      <DataType>varchar(20)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>3</Position>\n    </column>\n    <key id=\"377\" parent=\"340\" name=\"PRIMARY\">\n      <ColNames>genreID</ColNames>\n      <NameSurrogate>1</NameSurrogate>\n      <Primary>1</Primary>\n    </key>\n    <column id=\"378\" parent=\"341\" name=\"publisher_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>1</Position>\n    </column>\n    <column id=\"379\" parent=\"341\" name=\"publisher_name\">\n      <DataType>varchar(120)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>2</Position>\n    </column>\n    <column id=\"380\" parent=\"341\" name=\"address\">\n      <DataType>varchar(120)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>3</Position>\n    </column>\n    <column id=\"381\" parent=\"341\" name=\"website\">\n      <DataType>varchar(120)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>4</Position>\n    </column>\n    <key id=\"382\" parent=\"341\" name=\"PRIMARY\">\n      <ColNames>publisher_id</ColNames>\n      <NameSurrogate>1</NameSurrogate>\n      <Primary>1</Primary>\n    </key>\n    <column id=\"383\" parent=\"342\" name=\"rating_id\">\n      <DataType>int(11)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>1</Position>\n    </column>\n    <column id=\"384\" parent=\"342\" name=\"rating\">\n      <DataType>decimal(5,1 digit)|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>2</Position>\n    </column>\n    <column id=\"385\" parent=\"342\" name=\"stars\">\n      <DataType>text|0s</DataType>\n      <NotNull>1</NotNull>\n      <Position>3</Position>\n    </column>\n    <key id=\"386\" parent=\"342\" name=\"PRIMARY\">\n      <ColNames>rating_id</ColNames>\n      <NameSurrogate>1</NameSurrogate>\n      <Primary>1</Primary>\n    </key>\n  </database-model>\n</dataSource>
+===================================================================
+diff --git a/.idea/dataSources/70565d18-468d-4197-94d4-880077ac668d.xml b/.idea/dataSources/70565d18-468d-4197-94d4-880077ac668d.xml
+--- a/.idea/dataSources/70565d18-468d-4197-94d4-880077ac668d.xml	
++++ b/.idea/dataSources/70565d18-468d-4197-94d4-880077ac668d.xml	
+@@ -1,131 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <dataSource name="books_I425@localhost">
+   <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.39">
+-    <root id="1">
+-      <DefaultCasing>lower/lower</DefaultCasing>
+-      <DefaultEngine>InnoDB</DefaultEngine>
+-      <Grants>|root||phpuser||ALTER|G
+-|root||root|127.0.0.1|ALTER|G
+-|root||root|::1|ALTER|G
+-|root||root|localhost|ALTER|G
+-|root||phpuser||ALTER ROUTINE|G
+-|root||root|127.0.0.1|ALTER ROUTINE|G
+-|root||root|::1|ALTER ROUTINE|G
+-|root||root|localhost|ALTER ROUTINE|G
+-|root||phpuser||CREATE|G
+-|root||root|127.0.0.1|CREATE|G
+-|root||root|::1|CREATE|G
+-|root||root|localhost|CREATE|G
+-|root||phpuser||CREATE ROUTINE|G
+-|root||root|127.0.0.1|CREATE ROUTINE|G
+-|root||root|::1|CREATE ROUTINE|G
+-|root||root|localhost|CREATE ROUTINE|G
+-|root||phpuser||CREATE TABLESPACE|G
+-|root||root|127.0.0.1|CREATE TABLESPACE|G
+-|root||root|::1|CREATE TABLESPACE|G
+-|root||root|localhost|CREATE TABLESPACE|G
+-|root||phpuser||CREATE TEMPORARY TABLES|G
+-|root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
+-|root||root|::1|CREATE TEMPORARY TABLES|G
+-|root||root|localhost|CREATE TEMPORARY TABLES|G
+-|root||phpuser||CREATE USER|G
+-|root||root|127.0.0.1|CREATE USER|G
+-|root||root|::1|CREATE USER|G
+-|root||root|localhost|CREATE USER|G
+-|root||phpuser||CREATE VIEW|G
+-|root||root|127.0.0.1|CREATE VIEW|G
+-|root||root|::1|CREATE VIEW|G
+-|root||root|localhost|CREATE VIEW|G
+-|root||phpuser||DELETE|G
+-|root||root|127.0.0.1|DELETE|G
+-|root||root|::1|DELETE|G
+-|root||root|localhost|DELETE|G
+-|root||phpuser||DELETE HISTORY|G
+-|root||root|127.0.0.1|DELETE HISTORY|G
+-|root||root|::1|DELETE HISTORY|G
+-|root||root|localhost|DELETE HISTORY|G
+-|root||phpuser||DROP|G
+-|root||root|127.0.0.1|DROP|G
+-|root||root|::1|DROP|G
+-|root||root|localhost|DROP|G
+-|root||phpuser||EVENT|G
+-|root||root|127.0.0.1|EVENT|G
+-|root||root|::1|EVENT|G
+-|root||root|localhost|EVENT|G
+-|root||phpuser||EXECUTE|G
+-|root||root|127.0.0.1|EXECUTE|G
+-|root||root|::1|EXECUTE|G
+-|root||root|localhost|EXECUTE|G
+-|root||phpuser||FILE|G
+-|root||root|127.0.0.1|FILE|G
+-|root||root|::1|FILE|G
+-|root||root|localhost|FILE|G
+-|root||phpuser||INDEX|G
+-|root||root|127.0.0.1|INDEX|G
+-|root||root|::1|INDEX|G
+-|root||root|localhost|INDEX|G
+-|root||phpuser||INSERT|G
+-|root||root|127.0.0.1|INSERT|G
+-|root||root|::1|INSERT|G
+-|root||root|localhost|INSERT|G
+-|root||phpuser||LOCK TABLES|G
+-|root||root|127.0.0.1|LOCK TABLES|G
+-|root||root|::1|LOCK TABLES|G
+-|root||root|localhost|LOCK TABLES|G
+-|root||phpuser||PROCESS|G
+-|root||root|127.0.0.1|PROCESS|G
+-|root||root|::1|PROCESS|G
+-|root||root|localhost|PROCESS|G
+-|root||phpuser||REFERENCES|G
+-|root||root|127.0.0.1|REFERENCES|G
+-|root||root|::1|REFERENCES|G
+-|root||root|localhost|REFERENCES|G
+-|root||phpuser||RELOAD|G
+-|root||root|127.0.0.1|RELOAD|G
+-|root||root|::1|RELOAD|G
+-|root||root|localhost|RELOAD|G
+-|root||phpuser||REPLICATION CLIENT|G
+-|root||root|127.0.0.1|REPLICATION CLIENT|G
+-|root||root|::1|REPLICATION CLIENT|G
+-|root||root|localhost|REPLICATION CLIENT|G
+-|root||phpuser||REPLICATION SLAVE|G
+-|root||root|127.0.0.1|REPLICATION SLAVE|G
+-|root||root|::1|REPLICATION SLAVE|G
+-|root||root|localhost|REPLICATION SLAVE|G
+-|root||phpuser||SELECT|G
+-|root||root|127.0.0.1|SELECT|G
+-|root||root|::1|SELECT|G
+-|root||root|localhost|SELECT|G
+-|root||phpuser||SHOW DATABASES|G
+-|root||root|127.0.0.1|SHOW DATABASES|G
+-|root||root|::1|SHOW DATABASES|G
+-|root||root|localhost|SHOW DATABASES|G
+-|root||phpuser||SHOW VIEW|G
+-|root||root|127.0.0.1|SHOW VIEW|G
+-|root||root|::1|SHOW VIEW|G
+-|root||root|localhost|SHOW VIEW|G
+-|root||phpuser||SHUTDOWN|G
+-|root||root|127.0.0.1|SHUTDOWN|G
+-|root||root|::1|SHUTDOWN|G
+-|root||root|localhost|SHUTDOWN|G
+-|root||phpuser||SUPER|G
+-|root||root|127.0.0.1|SUPER|G
+-|root||root|::1|SUPER|G
+-|root||root|localhost|SUPER|G
+-|root||phpuser||TRIGGER|G
+-|root||root|127.0.0.1|TRIGGER|G
+-|root||root|::1|TRIGGER|G
+-|root||root|localhost|TRIGGER|G
+-|root||phpuser||UPDATE|G
+-|root||root|127.0.0.1|UPDATE|G
+-|root||root|::1|UPDATE|G
+-|root||root|localhost|UPDATE|G
+-|root||phpuser||grant option|G
+-|root||root|127.0.0.1|grant option|G
+-|root||root|::1|grant option|G
+-|root||root|localhost|grant option|G</Grants>
+-      <ServerVersion>10.4.24</ServerVersion>
+-    </root>
++    <root id="1"/>
+     <collation id="2" parent="1" name="armscii8_bin">
+       <Charset>armscii8</Charset>
+     </collation>
+@@ -1170,249 +1046,5 @@
+     <user id="336" parent="1" name="root">
+       <Host>localhost</Host>
+     </user>
+-    <table id="337" parent="324" name="author_and_book">
+-      <Engine>InnoDB</Engine>
+-      <CollationName>utf8mb4_general_ci</CollationName>
+-    </table>
+-    <table id="338" parent="324" name="authors">
+-      <Engine>InnoDB</Engine>
+-      <CollationName>latin1_swedish_ci</CollationName>
+-    </table>
+-    <table id="339" parent="324" name="books">
+-      <Engine>InnoDB</Engine>
+-      <CollationName>latin1_swedish_ci</CollationName>
+-    </table>
+-    <table id="340" parent="324" name="genres">
+-      <Engine>InnoDB</Engine>
+-      <CollationName>latin1_swedish_ci</CollationName>
+-    </table>
+-    <table id="341" parent="324" name="publisher">
+-      <Engine>InnoDB</Engine>
+-      <CollationName>latin1_swedish_ci</CollationName>
+-    </table>
+-    <table id="342" parent="324" name="ratings">
+-      <Engine>InnoDB</Engine>
+-      <CollationName>utf8mb4_general_ci</CollationName>
+-    </table>
+-    <column id="343" parent="337" name="author_book_id">
+-      <AutoIncrement>23</AutoIncrement>
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>1</Position>
+-    </column>
+-    <column id="344" parent="337" name="book_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>2</Position>
+-    </column>
+-    <column id="345" parent="337" name="author_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>3</Position>
+-    </column>
+-    <foreign-key id="346" parent="337" name="author_and_book_ibfk_2">
+-      <ColNames>book_id</ColNames>
+-      <OnUpdate>cascade</OnUpdate>
+-      <RefColNames>book_id</RefColNames>
+-      <RefTableName>books</RefTableName>
+-    </foreign-key>
+-    <foreign-key id="347" parent="337" name="author_and_book_ibfk_1">
+-      <ColNames>author_id</ColNames>
+-      <RefColNames>author_id</RefColNames>
+-      <RefTableName>authors</RefTableName>
+-    </foreign-key>
+-    <index id="348" parent="337" name="book_id">
+-      <ColNames>book_id
+-author_id</ColNames>
+-      <Type>btree</Type>
+-    </index>
+-    <index id="349" parent="337" name="author_id">
+-      <ColNames>author_id</ColNames>
+-      <Type>btree</Type>
+-    </index>
+-    <key id="350" parent="337" name="PRIMARY">
+-      <ColNames>author_book_id</ColNames>
+-      <NameSurrogate>1</NameSurrogate>
+-      <Primary>1</Primary>
+-    </key>
+-    <column id="351" parent="338" name="author_id">
+-      <AutoIncrement>23</AutoIncrement>
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>1</Position>
+-    </column>
+-    <column id="352" parent="338" name="firstname">
+-      <DataType>varchar(20)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>2</Position>
+-    </column>
+-    <column id="353" parent="338" name="lastname">
+-      <DataType>varchar(20)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>3</Position>
+-    </column>
+-    <key id="354" parent="338" name="PRIMARY">
+-      <ColNames>author_id</ColNames>
+-      <NameSurrogate>1</NameSurrogate>
+-      <Primary>1</Primary>
+-    </key>
+-    <column id="355" parent="339" name="book_id">
+-      <AutoIncrement>21</AutoIncrement>
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>1</Position>
+-    </column>
+-    <column id="356" parent="339" name="title">
+-      <DataType>varchar(120)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>2</Position>
+-    </column>
+-    <column id="357" parent="339" name="isbn">
+-      <DataType>varchar(15)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>3</Position>
+-    </column>
+-    <column id="358" parent="339" name="author_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>4</Position>
+-    </column>
+-    <column id="359" parent="339" name="publisher_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>5</Position>
+-    </column>
+-    <column id="360" parent="339" name="price">
+-      <DataType>decimal(5,2 digit)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>6</Position>
+-    </column>
+-    <column id="361" parent="339" name="description">
+-      <DataType>text|0s</DataType>
+-      <Position>7</Position>
+-    </column>
+-    <column id="362" parent="339" name="image">
+-      <DataType>varchar(120)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>8</Position>
+-    </column>
+-    <column id="363" parent="339" name="genre_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>9</Position>
+-    </column>
+-    <column id="364" parent="339" name="rating_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>10</Position>
+-    </column>
+-    <foreign-key id="365" parent="339" name="books_ibfk_2">
+-      <ColNames>publisher_id</ColNames>
+-      <RefColNames>publisher_id</RefColNames>
+-      <RefTableName>publisher</RefTableName>
+-    </foreign-key>
+-    <foreign-key id="366" parent="339" name="books_ibfk_3">
+-      <ColNames>genre_id</ColNames>
+-      <RefColNames>genreID</RefColNames>
+-      <RefTableName>genres</RefTableName>
+-    </foreign-key>
+-    <foreign-key id="367" parent="339" name="books_ibfk_4">
+-      <ColNames>rating_id</ColNames>
+-      <RefColNames>rating_id</RefColNames>
+-      <RefTableName>ratings</RefTableName>
+-    </foreign-key>
+-    <index id="368" parent="339" name="publisher_id">
+-      <ColNames>publisher_id</ColNames>
+-      <Type>btree</Type>
+-      <Unique>1</Unique>
+-    </index>
+-    <index id="369" parent="339" name="author_id">
+-      <ColNames>author_id
+-genre_id</ColNames>
+-      <Type>btree</Type>
+-    </index>
+-    <index id="370" parent="339" name="genre_id">
+-      <ColNames>genre_id</ColNames>
+-      <Type>btree</Type>
+-    </index>
+-    <index id="371" parent="339" name="rating_id">
+-      <ColNames>rating_id</ColNames>
+-      <Type>btree</Type>
+-    </index>
+-    <key id="372" parent="339" name="PRIMARY">
+-      <ColNames>book_id</ColNames>
+-      <NameSurrogate>1</NameSurrogate>
+-      <Primary>1</Primary>
+-    </key>
+-    <key id="373" parent="339" name="publisher_id">
+-      <ColNames>publisher_id</ColNames>
+-      <UnderlyingIndexName>publisher_id</UnderlyingIndexName>
+-    </key>
+-    <column id="374" parent="340" name="genreID">
+-      <AutoIncrement>13</AutoIncrement>
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>1</Position>
+-    </column>
+-    <column id="375" parent="340" name="fiction_nonfiction">
+-      <DataType>varchar(20)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>2</Position>
+-    </column>
+-    <column id="376" parent="340" name="genre_name">
+-      <DataType>varchar(20)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>3</Position>
+-    </column>
+-    <key id="377" parent="340" name="PRIMARY">
+-      <ColNames>genreID</ColNames>
+-      <NameSurrogate>1</NameSurrogate>
+-      <Primary>1</Primary>
+-    </key>
+-    <column id="378" parent="341" name="publisher_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>1</Position>
+-    </column>
+-    <column id="379" parent="341" name="publisher_name">
+-      <DataType>varchar(120)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>2</Position>
+-    </column>
+-    <column id="380" parent="341" name="address">
+-      <DataType>varchar(120)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>3</Position>
+-    </column>
+-    <column id="381" parent="341" name="website">
+-      <DataType>varchar(120)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>4</Position>
+-    </column>
+-    <key id="382" parent="341" name="PRIMARY">
+-      <ColNames>publisher_id</ColNames>
+-      <NameSurrogate>1</NameSurrogate>
+-      <Primary>1</Primary>
+-    </key>
+-    <column id="383" parent="342" name="rating_id">
+-      <DataType>int(11)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>1</Position>
+-    </column>
+-    <column id="384" parent="342" name="rating">
+-      <DataType>decimal(5,1 digit)|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>2</Position>
+-    </column>
+-    <column id="385" parent="342" name="stars">
+-      <DataType>text|0s</DataType>
+-      <NotNull>1</NotNull>
+-      <Position>3</Position>
+-    </column>
+-    <key id="386" parent="342" name="PRIMARY">
+-      <ColNames>rating_id</ColNames>
+-      <NameSurrogate>1</NameSurrogate>
+-      <Primary>1</Primary>
+-    </key>
+   </database-model>
+ </dataSource>
+\ No newline at end of file
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"dataSourceStorageLocal\" created-in=\"PS-221.5591.58\">\n    <data-source name=\"books_I425@localhost\" uuid=\"70565d18-468d-4197-94d4-880077ac668d\">\n      <database-info product=\"MariaDB\" version=\"10.4.24-MariaDB\" jdbc-version=\"4.2\" driver-name=\"MariaDB Connector/J\" driver-version=\"2.7.3\" dbms=\"MARIADB\" exact-version=\"10.4.24\" exact-driver-version=\"2.7\">\n        <extra-name-characters>#@</extra-name-characters>\n        <identifier-quote-string>`</identifier-quote-string>\n      </database-info>\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\n      <secret-storage>master_key</secret-storage>\n      <user-name>phpuser</user-name>\n      <schema-mapping>\n        <introspection-scope>\n          <node kind=\"schema\" qname=\"@\" />\n        </introspection-scope>\n      </schema-mapping>\n    </data-source>\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	
++++ b/.idea/dataSources.local.xml	
+@@ -2,18 +2,8 @@
+ <project version="4">
+   <component name="dataSourceStorageLocal" created-in="PS-221.5591.58">
+     <data-source name="books_I425@localhost" uuid="70565d18-468d-4197-94d4-880077ac668d">
+-      <database-info product="MariaDB" version="10.4.24-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="2.7">
+-        <extra-name-characters>#@</extra-name-characters>
+-        <identifier-quote-string>`</identifier-quote-string>
+-      </database-info>
+-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+-      <secret-storage>master_key</secret-storage>
+-      <user-name>phpuser</user-name>
+-      <schema-mapping>
+-        <introspection-scope>
+-          <node kind="schema" qname="@" />
+-        </introspection-scope>
+-      </schema-mapping>
++      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" exact-version="0" />
++      <schema-mapping />
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file

@@ -1,0 +1,62 @@
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\n    <data-source source=\"LOCAL\" name=\"books_I425@localhost\" uuid=\"70565d18-468d-4197-94d4-880077ac668d\">\n      <driver-ref>mariadb</driver-ref>\n      <synchronize>true</synchronize>\n      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>\n      <jdbc-url>jdbc:mariadb://localhost:3306/books_I425</jdbc-url>\n      <working-dir>$ProjectFileDir$</working-dir>\n    </data-source>\n    <data-source source=\"LOCAL\" name=\"group5_books_db@localhost\" uuid=\"23f22e0c-db27-4ada-bbc2-cde315d24cef\">\n      <driver-ref>mariadb</driver-ref>\n      <synchronize>true</synchronize>\n      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>\n      <jdbc-url>jdbc:mariadb://localhost:3306/group5_books_db</jdbc-url>\n      <working-dir>$ProjectFileDir$</working-dir>\n    </data-source>\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	
++++ b/.idea/dataSources.xml	
+@@ -1,18 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="books_I425@localhost" uuid="70565d18-468d-4197-94d4-880077ac668d">
++    <data-source source="LOCAL" name="group5_books_db@localhost" uuid="f452442c-e51c-4ee1-b56f-4fd50d500961">
+       <driver-ref>mariadb</driver-ref>
+       <synchronize>true</synchronize>
+       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+       <jdbc-url>jdbc:mariadb://localhost:3306/books_I425</jdbc-url>
+-      <working-dir>$ProjectFileDir$</working-dir>
+-    </data-source>
+-    <data-source source="LOCAL" name="group5_books_db@localhost" uuid="23f22e0c-db27-4ada-bbc2-cde315d24cef">
+-      <driver-ref>mariadb</driver-ref>
+-      <synchronize>true</synchronize>
+-      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+-      <jdbc-url>jdbc:mariadb://localhost:3306/group5_books_db</jdbc-url>
+       <working-dir>$ProjectFileDir$</working-dir>
+     </data-source>
+   </component>
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"dataSourceStorageLocal\" created-in=\"PS-221.5591.58\">\n    <data-source name=\"books_I425@localhost\" uuid=\"70565d18-468d-4197-94d4-880077ac668d\">\n      <database-info product=\"\" version=\"\" jdbc-version=\"\" driver-name=\"\" driver-version=\"\" dbms=\"MARIADB\" exact-version=\"0\" />\n      <schema-mapping />\n    </data-source>\n    <data-source name=\"group5_books_db@localhost\" uuid=\"23f22e0c-db27-4ada-bbc2-cde315d24cef\">\n      <database-info product=\"MariaDB\" version=\"10.4.24-MariaDB\" jdbc-version=\"4.2\" driver-name=\"MariaDB Connector/J\" driver-version=\"2.7.3\" dbms=\"MARIADB\" exact-version=\"10.4.24\" exact-driver-version=\"2.7\">\n        <extra-name-characters>#@</extra-name-characters>\n        <identifier-quote-string>`</identifier-quote-string>\n      </database-info>\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\n      <secret-storage>master_key</secret-storage>\n      <user-name>phpuser</user-name>\n      <schema-mapping>\n        <introspection-scope>\n          <node kind=\"schema\" qname=\"@\" />\n        </introspection-scope>\n      </schema-mapping>\n    </data-source>\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	
++++ b/.idea/dataSources.local.xml	
+@@ -1,23 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="dataSourceStorageLocal" created-in="PS-221.5591.58">
+-    <data-source name="books_I425@localhost" uuid="70565d18-468d-4197-94d4-880077ac668d">
++    <data-source name="group5_books_db@localhost" uuid="f452442c-e51c-4ee1-b56f-4fd50d500961">
+       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" exact-version="0" />
+       <schema-mapping />
+-    </data-source>
+-    <data-source name="group5_books_db@localhost" uuid="23f22e0c-db27-4ada-bbc2-cde315d24cef">
+-      <database-info product="MariaDB" version="10.4.24-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.24" exact-driver-version="2.7">
+-        <extra-name-characters>#@</extra-name-characters>
+-        <identifier-quote-string>`</identifier-quote-string>
+-      </database-info>
+-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+-      <secret-storage>master_key</secret-storage>
+-      <user-name>phpuser</user-name>
+-      <schema-mapping>
+-        <introspection-scope>
+-          <node kind="schema" qname="@" />
+-        </introspection-scope>
+-      </schema-mapping>
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file
