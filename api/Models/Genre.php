@@ -13,33 +13,40 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genre extends Model
 {
-//the table associated with this model
+    //the table associated with this model
     protected $table = 'genres';
 
-//the primary key of the table
+    //the primary key of the table
     protected $primaryKey = 'genreID';
 
-//the PK is auto-incremented
+    //the PK is auto-incremented
     public $incrementing = true;
 
-//if te updated_at and created_at columns aren't used
+    //if te updated_at and created_at columns aren't used
     public $timestamps = false;
 
-//retrieve all authors
+
+    // 1-M relationship b/w genre and book models
+    public function books()
+    {
+        return $this->hasMany(Book::class, 'genre_id');
+    }
+
+    //retrieve all authors
     public static function getGenres()
     {
-//retrieve all authors
-        $genres = self::all();
+        $genres = self::with('books')->get();
+
         return $genres;
     }
 
     public static function getGenreById(string $id)
     {
         $genre = self::findOrFail($id);
+        $genre->load('books');
         return $genre;
-
-
     }
+
     //genre to books relationship, many books to one genre
     public static function getBooksByGenre(string $id)
     {
