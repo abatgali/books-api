@@ -26,4 +26,10 @@ class BookController {
        return Helper::withJson($response, $results, 200);
     }
 
+    //View all classes of a student
+    public function viewBookAuthors(Request $request, Response $response, array $args) : Response {
+        $id = $args['id'];
+        $results = Book::getBookAuthors($id);
+        return Helper::withJson($response, $results, 200);
+    }
 }

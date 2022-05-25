@@ -10,6 +10,7 @@ namespace BooksAPI\Models;
 use Illuminate\Database\Eloquent\Model;
 
 
+
 class Book extends Model{
 
     //the table associated with this model
@@ -41,4 +42,15 @@ class Book extends Model{
         {
             return $this->belongsTo(Genre::class, 'genre_id');
         }
+
+    // Define the many-to-many relationship between Books and Author model classes.
+    public function authors(){
+        return $this->belongsToMany(Author::class, 'author_and_book', 'book_id', 'author_id');
+    }
+
+    //Get a book's authors
+    public static function getBookAuthors(string $id) {
+        $authors = self::findOrFail($id)->authors;
+        return $authors;
+    }
 }

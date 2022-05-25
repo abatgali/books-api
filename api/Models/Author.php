@@ -38,8 +38,17 @@ class Author extends Model
         $author = self::findOrFail($id);
         return $author;
 
-
     }
 
+    // Define the many-to-many relationship between Books and Author model classes.
+    public function books(){
+        return $this->belongsToMany(Book::class, 'author_and_book', 'book_id', 'author_id');
+    }
+
+    //Get an author's books
+    public static function getAuthorBooks(string $id) {
+        $books = self::findOrFail($id)->books;
+        return $books;
+    }
 
 }
