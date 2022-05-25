@@ -24,13 +24,14 @@ return function(App $app){
         $group->group('/books', function (RouteCollectorProxy $group){
             $group->get('', 'Book:index');
             $group->get('/{id}', 'Book:view');
-
+            $group->get('/{id}/authors', 'Book:viewBookAuthors');
         });
 
         //Route group for Authors pattern
         $group->group('/authors', function (RouteCollectorProxy $group){
             $group->get('','Author:index');
             $group->get('/{id}','Author:view');
+            $group->get('/{id}/books', 'Author:viewAuthorBooks');
         });
 
         //Route group for Genres pattern
