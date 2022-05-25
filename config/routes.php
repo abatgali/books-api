@@ -52,6 +52,11 @@ return function(App $app){
             $group->get('','Publisher:index');
             $group->get('/{id}','Publisher:view');
         });
+        //Route group for Ratings pattern
+        $group->group('/ratings', function (RouteCollectorProxy $group){
+            $group->get('','Rating:index');
+            $group->get('/{id}','Rating:view');
+        });
     });
 };
 
