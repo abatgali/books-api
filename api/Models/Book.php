@@ -8,32 +8,37 @@
 
 namespace BooksAPI\Models;
 use Illuminate\Database\Eloquent\Model;
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+
 
 class Book extends Model{
-//the table associated with this model
-protected $table = 'books';
 
-//the primary key of the table
-protected $primaryKey = 'book_id';
+    //the table associated with this model
+    protected $table = 'books';
 
-//the PK is auto-incremented
-public $incrementing = true;
+    //the primary key of the table
+    protected $primaryKey = 'book_id';
 
-//if te updated_at and created_at columns aren't used
-public $timestamps = false;
+    //the PK is auto-incremented
+    public $incrementing = true;
 
-//retrieve all books
-public static function getBooks(){
-//retrieve all books
-$books = self::all();
-return $books;
-}
-    public static function getBookById(string $book_id) {
-        $book = self::findOrFail($book_id);
-        return $book;
+    //if te updated_at and created_at columns aren't used
+    public $timestamps = false;
+
+    //retrieve all books
+    public static function getBooks(){
+    //retrieve all books
+    $books = self::all();
+    return $books;
     }
+        public static function getBookById(string $book_id) {
+            $book = self::findOrFail($book_id);
+            $book->load('genre');
+            return $book;
+        }
 
-
+        // defining 1-M(inverse relationship) b/w genres and books
+        public function genre()
+        {
+            return $this->belongsTo(Genre::class, 'genre_id');
+        }
 }
