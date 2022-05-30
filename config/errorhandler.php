@@ -29,7 +29,7 @@ return function (
     ?LoggerInterface       $logger = null
 )
     use ($app) {
-    $logger?->error($exception->getMessage());
+    $logger?:error($exception->getMessage());
 
     //Set message and status according to the exception
     switch (get_class($exception)) {

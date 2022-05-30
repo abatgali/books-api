@@ -17,7 +17,13 @@ use BooksAPI\Controllers\ControllerHelper as Helper;
 class AuthorController {
     //list all books
     public function index( Request $request, Response $response, array $args) : Response {
-        $results = Author::getAuthors();
+        //$results = Author::getAuthors();
+        //Get querystring variables from url
+        $params = $request->getQueryParams();
+        $term = array_key_exists('q', $params) ? $params['q'] : "";
+
+        //Call the model method to get authors
+        $results = ($term) ? Author::searchAuthors($term) : Author::getAuthors();
         return Helper::withJson($response, $results, 200);
     }
 
