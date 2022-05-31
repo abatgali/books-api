@@ -51,4 +51,16 @@ class Author extends Model
         return $books;
     }
 
+    //search for authors
+    public static function searchAuthors($term){
+        if (is_numeric($term)) {
+            $query = self::where('author_id', '=', $term);
+        } else {
+            $query = self::where('firstname', 'like', "%$term%")
+                ->orWhere('lastname', 'like', "%$term%");
+        }
+        return $query->get();
+
+    }
+
 }

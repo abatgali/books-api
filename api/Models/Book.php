@@ -53,4 +53,16 @@ class Book extends Model{
         $authors = self::findOrFail($id)->authors;
         return $authors;
     }
+
+    public static function searchBooks($term)
+    {
+        if (is_numeric($term)) {
+            $query = self::where('book_id', '=', $term);
+        } else {
+            $query = self::where('title', 'like', "%$term%")
+                ->orWhere('description', 'like', "%$term%")
+                ->orWhere('isbn', 'like', "%$term%");
+        }
+        return $query->get();
+    }
 }
