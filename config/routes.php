@@ -25,6 +25,7 @@ return function(App $app){
             $group->get('', 'Book:index');
             $group->get('/{id}', 'Book:view');
             $group->get('/{id}/authors', 'Book:viewBookAuthors');
+            $group->post('', 'Book:create');
         });
 
         //Route group for Authors pattern

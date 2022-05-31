@@ -36,16 +36,16 @@ class Validator
         return empty(self::$errors);
     }
 
-    //Validate student data.
+    //Validate book data.
     public static function validateBook($request) : bool {
         //Define all the validation rules
         $rules = [
-            //'id' => v::notEmpty()->alnum()->startsWith('s')->length(5, 5),
-            'title' => v::alnum(' '),
+            'title' => v::charset('ASCII'),
             'isbn' => v::isbn(),
             'publisher_id' => v::number(),
+            // price value has to be enclosed within double quotation marks when posting
             'price' => v::decimal(2),
-            'description' => v::alnum(),
+            'description' => v::charset('ASCII'),
             'image' => v::Url(),
             'genre_id' => v::number(),
             'rating_id' => v::number()

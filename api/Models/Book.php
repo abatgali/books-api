@@ -65,4 +65,23 @@ class Book extends Model{
         }
         return $query->get();
     }
+
+    //Insert a new book
+    public static function createBooks($request) {
+
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Create a new Student instance
+        $book = new Book();
+
+        //Set the book's attributes
+        foreach($params as $field => $value) {
+            $book->$field = $value;
+        }
+
+        //Insert the student into the database
+        $book->save();
+
+        return $book;
+    }
 }
