@@ -5,6 +5,7 @@
  * File: routes.php
  *Description:
  */
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
@@ -33,6 +34,7 @@ return function(App $app){
             $group->get('','Author:index');
             $group->get('/{id}','Author:view');
             $group->get('/{id}/books', 'Author:viewAuthorBooks');
+            $group->post('', 'Author:create');
         });
 
         //Route group for Genres pattern
@@ -40,6 +42,7 @@ return function(App $app){
             $group->get('','Genre:index');
             $group->get('/{id}','Genre:view');
             $group->get('/{id}/books', 'Genre:viewBooks');
+            $group->post('', 'Genre:create');
 
         });
 
@@ -53,6 +56,7 @@ return function(App $app){
         $group->group('/publishers', function (RouteCollectorProxy $group){
             $group->get('','Publisher:index');
             $group->get('/{id}','Publisher:view');
+            $group->post('', 'Publisher:create');
         });
         //Route group for Ratings pattern
         $group->group('/ratings', function (RouteCollectorProxy $group){

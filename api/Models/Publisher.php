@@ -27,7 +27,7 @@ class Publisher extends Model
     protected $primaryKey = 'publisher_id';
 
     //the PK is auto-incremented
-    public $incrementing = true;
+    public $incrementing = false;
 
     //if te updated_at and created_at columns aren't used
     public $timestamps = false;
@@ -44,5 +44,30 @@ class Publisher extends Model
     {
         $publisher = self::findOrFail($id);
         return $publisher;
+    }
+
+    //Insert a new publisher
+    public static function createPublishers($request) {
+
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Create a new Publisher instance
+        $publisher = new Publisher();
+
+        //Set the publisher's attributes
+        foreach($params as $field => $value) {
+            $publisher->$field = $value;
+        }
+
+        //Insert the student into the database
+        $publisher->save();
+
+        return $publisher;
+    }
+
+    // 1-M relationship b/w publishers and books
+    public function books()
+    {
+        return $this->hasMany(Book::class, 'publisher_id');
     }
 }

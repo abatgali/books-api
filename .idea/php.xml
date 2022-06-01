@@ -42,6 +42,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/respect/validation" />
       <path value="$PROJECT_DIR$/vendor/respect/stringifier" />
+      <path value="$PROJECT_DIR$/vendor/sokil/php-isocodes" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">

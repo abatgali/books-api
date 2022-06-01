@@ -37,8 +37,12 @@ class Rating extends Model
     {
         $rating = self::findOrFail($id);
         return $rating;
+    }
 
-
+    // 1-M relationship b/w ratings and books
+    public function books()
+    {
+        return $this->hasMany(Book::class, 'rating_id');
     }
 
 }

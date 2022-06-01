@@ -7,9 +7,8 @@
 */
 
 namespace BooksAPI\Models;
+
 use Illuminate\Database\Eloquent\Model;
-
-
 
 class Book extends Model{
 
@@ -27,21 +26,44 @@ class Book extends Model{
 
     //retrieve all books
     public static function getBooks(){
-    //retrieve all books
-    $books = self::all();
-    return $books;
-    }
-        public static function getBookById(string $book_id) {
-            $book = self::findOrFail($book_id);
-            $book->load('genre');
-            return $book;
-        }
+        //retrieve all books
+        $books = self::all();
+        $books->load('authors');
+        $books->load('genre');
+        $books->load('rating');
+        $books->load('publisher');
 
-        // defining 1-M(inverse relationship) b/w genres and books
-        public function genre()
-        {
-            return $this->belongsTo(Genre::class, 'genre_id');
-        }
+        return $books;
+    }
+
+    // retrieve a specific book
+    public static function getBookById(string $book_id) {
+        $book = self::findOrFail($book_id);
+        $book->load('genre');
+        $book->load('rating');
+        $book->load('publisher');
+        $book->load('authors');
+
+        return $book;
+    }
+
+    // defining 1-M(inverse relationship) b/w genres and books
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class, 'genre_id');
+    }
+
+    // defining 1-M(inverse relationship) b/w genres and books
+    public function rating()
+    {
+        return $this->belongsTo(Rating::class, 'rating_id');
+    }
+
+    // defining 1-M(inverse relationship) b/w genres and books
+    public function publisher()
+    {
+        return $this->belongsTo(Publisher::class, 'publisher_id');
+    }
 
     // Define the many-to-many relationship between Books and Author model classes.
     public function authors(){

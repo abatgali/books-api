@@ -53,4 +53,28 @@ class Validator
 
         return self::validate($request, $rules);
     }
+
+    //Validate author data.
+    public static function validateAuthor($request) : bool {
+        //Define all the validation rules
+        $rules = [
+            'firstname' => v::alpha(),
+            'lastname' => v::alpha()
+        ];
+
+        return self::validate($request, $rules);
+    }
+
+    //Validate publisher data.
+    public static function validatePublisher($request) : bool {
+        //Define all the validation rules
+        $rules = [
+            'publisher_id' => v::number(),
+            'publisher_name' => v::alpha(),
+            'address' => v::charset('ASCII'),
+            'website' => v::url()
+        ];
+
+        return self::validate($request, $rules);
+    }
 }
