@@ -14,7 +14,8 @@ use Slim\Routing\RouteCollectorProxy;
 return function(App $app){
 
     // Define app route
-    $app->get('/', function (Request $request, Response $response, array $args) { $response->getBody()->write('Welcome to Books API!');
+    $app->get('/', function (Request $request, Response $response, array $args) {
+        $response->getBody()->write('Welcome to Books API!');
         return $response;
     });
 
@@ -43,7 +44,8 @@ return function(App $app){
             $group->get('/{id}','Genre:view');
             $group->get('/{id}/books', 'Genre:viewBooks');
             $group->post('', 'Genre:create');
-
+            $group->put('/{id}', 'Genre:update');
+            $group->delete('/{id}', 'Genre:delete');
         });
 
         //Route group for Authors and Books pattern
@@ -58,6 +60,7 @@ return function(App $app){
             $group->get('/{id}','Publisher:view');
             $group->post('', 'Publisher:create');
         });
+
         //Route group for Ratings pattern
         $group->group('/ratings', function (RouteCollectorProxy $group){
             $group->get('','Rating:index');
