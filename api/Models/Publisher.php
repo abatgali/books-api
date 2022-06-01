@@ -64,4 +64,10 @@ class Publisher extends Model
 
         return $publisher;
     }
+
+    // 1-M relationship b/w publishers and books
+    public function books()
+    {
+        return $this->hasMany(Book::class, 'publisher_id');
+    }
 }
