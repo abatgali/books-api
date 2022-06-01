@@ -63,4 +63,42 @@ class Author extends Model
 
     }
 
+    //Insert a new author
+    public static function createAuthors($request) {
+
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Create a new author instance
+        $author = new Author();
+
+        //Set the book's attributes
+        foreach($params as $field => $value) {
+            $author->$field = $value;
+        }
+
+        //Insert the student into the database
+        $author->save();
+
+        return $author;
+    }
+
+    //Insert a new publisher
+    public static function createPublishers($request) {
+
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Create a new author instance
+        $publisher = new Publisher();
+
+        //Set the book's attributes
+        foreach($params as $field => $value) {
+            $publisher->$field = $value;
+        }
+
+        //Insert the student into the database
+        $publisher->save();
+
+        return $publisher;
+    }
+
 }

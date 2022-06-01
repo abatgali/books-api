@@ -9,11 +9,12 @@
 
 namespace BooksAPI\Controllers;
 
-
 use BooksAPI\Models\Author;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use BooksAPI\Controllers\ControllerHelper as Helper;
+use BooksAPI\Validation\Validator;
+
 class AuthorController {
     //list all books
     public function index( Request $request, Response $response, array $args) : Response {
@@ -38,5 +39,35 @@ class AuthorController {
         $id = $args['id'];
         $results = Author::getAuthorBooks($id);
         return Helper::withJson($response, $results, 200);
+    }
+
+    //Create a student
+    public function create(Request $request, Response $response, array $args) : Response {
+
+        //Validate the request
+        $validation = Validator::validateAuthor($request);
+
+        if(!$validation) {
+            $results = [
+                'status' => "Validation failed",
+                'errors' => Validator::getErrors() ];
+
+            return Helper::withJson($response, $results, 500);
+        }
+
+        //Create a new student
+        $author = Author::createAuthors($request);
+
+        if(!$author) {
+            $results['status']= "Author cannot be inserted.";
+            return Helper::withJson($response, $results, 500);
+        }
+
+        $results = [
+            'status' => "Author added.",
+            'data' => $author
+        ];
+
+        return Helper::withJson($response, $results, 201);
     }
 }
