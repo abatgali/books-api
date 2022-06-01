@@ -12,7 +12,6 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use BooksAPI\Models\Book;
 use BooksAPI\Controllers\ControllerHelper as Helper;
-
 use BooksAPI\Validation\Validator;
 
 class BookController {
@@ -42,7 +41,7 @@ class BookController {
         return Helper::withJson($response, $results, 200);
     }
 
-    //Create a student
+    //Create a book
     public function create(Request $request, Response $response, array $args) : Response {
 
         //Validate the request
