@@ -44,7 +44,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/respect/validation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/respect/stringifier" />
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/serializable-closure" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sokil/php-isocodes" />
+>>>>>>> 6aa70aa207ed70b574f9294525518fd7d9d3a240
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

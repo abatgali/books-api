@@ -25,7 +25,6 @@ class Book extends Model{
     public $timestamps = false;
 
     //retrieve all books
-<<<<<<< HEAD
     public static function getBooks($request){
     //retrieve all books
 //    $books = self::all();
