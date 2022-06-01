@@ -22,7 +22,7 @@ use BooksAPI\Controllers\ControllerHelper as Helper;
 class AuthorAndBooksController {
     //list all books
     public function index( Request $request, Response $response, array $args) : Response {
-        $results = AuthorAndBook::getAuthorsAndBooks();
+        $results = AuthorAndBook::getAuthorsAndBooks($request);
         return Helper::withJson($response, $results, 200);
     }
 
