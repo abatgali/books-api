@@ -28,6 +28,8 @@ return function(App $app){
             $group->get('/{id}', 'Book:view');
             $group->get('/{id}/authors', 'Book:viewBookAuthors');
             $group->post('', 'Book:create');
+            $group->put('/{id}', 'Book:update');
+            $group->delete('/{id}', 'Book:delete');
         });
 
         //Route group for Authors pattern
@@ -36,6 +38,8 @@ return function(App $app){
             $group->get('/{id}','Author:view');
             $group->get('/{id}/books', 'Author:viewAuthorBooks');
             $group->post('', 'Author:create');
+            $group->put('/{id}', 'Author:update');
+            $group->delete('/{id}', 'Author:delete');
         });
 
         //Route group for Genres pattern
@@ -59,6 +63,8 @@ return function(App $app){
             $group->get('','Publisher:index');
             $group->get('/{id}','Publisher:view');
             $group->post('', 'Publisher:create');
+            $group->put('/{id}', 'Publisher:update');
+            $group->delete('/{id}', 'Publisher:delete');
         });
 
         //Route group for Ratings pattern
