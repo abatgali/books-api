@@ -34,7 +34,7 @@ class BookController {
         return Helper::withJson($response, $results, 200);
     }
 
-    //View all classes of a student
+    //View all classes of a book
     public function viewBookAuthors(Request $request, Response $response, array $args) : Response {
         $id = $args['id'];
         $results = Book::getBookAuthors($id);
@@ -55,7 +55,7 @@ class BookController {
             return Helper::withJson($response, $results, 500);
         }
 
-        //Create a new student
+        //Create a new book
         $book = Book::createBooks($request);
 
         if(!$book) {
@@ -70,4 +70,30 @@ class BookController {
 
         return Helper::withJson($response, $results, 201);
     }
+
+    //Update a book
+    public function update(Request $request, Response $response, array $args) : Response {
+        //Validate the request
+        $validation = Validator::validateBook($request);
+        //if validation failed
+        if(!$validation) {
+            $results = [
+                'status' => "Validation failed",
+                'errors' => Validator::getErrors()
+            ];
+            return Helper::withJson($response, $results, 500);
+        }
+        $book = Book::updateBook($request);
+        if(!$book) {
+            $results['status']= "Book cannot be updated.";
+            return Helper::withJson($response, $results, 500);
+        }
+        $results = [
+            'status' => "Book has been updated.",
+            'data' => $book
+        ];
+        return Helper::withJson($response, $results, 200);
+    }
+
+
 }
