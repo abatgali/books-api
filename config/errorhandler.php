@@ -67,7 +67,7 @@ return function (
     }
     $results =
         [
-            "Title" => "MyCollege-API Application Error",
+            "Title" => "Books-API Application Error",
             "Error" => [
                 "Type" => get_class($exception),
                 "Code" => $exception->getCode(),
