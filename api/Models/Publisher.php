@@ -89,6 +89,12 @@ class Publisher extends Model
         $publisher->save();
         return $publisher;
     }
-
+    //Delete a Publisher
+    public static function deleteAuthor($request) {
+        //Retrieve id from the request
+        $id = $request->getAttribute('id');
+        $publisher = self::findOrFail($id);
+        return($publisher ? $publisher->delete() : $publisher);
+    }
 
 }

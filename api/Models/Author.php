@@ -119,7 +119,13 @@ class Author extends Model
         $author->save();
         return $author;
     }
-
+    //Delete a Author
+    public static function deleteAuthor($request) {
+        //Retrieve id from the request
+        $id = $request->getAttribute('id');
+        $author = self::findOrFail($id);
+        return($author ? $author->delete() : $author);
+    }
 
 
 }

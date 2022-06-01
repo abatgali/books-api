@@ -93,6 +93,18 @@ class AuthorController {
         ];
         return Helper::withJson($response, $results, 200);
     }
+    //Delete a Author
+    public function delete(Request $request, Response $response, array $args) : Response {
+        $author = Author::deleteAuthor($request);
 
+        if(!$author) {
+            $results['status']= "Author can't be deleted.";
+            return Helper::withJson($response, $results, 500);
+        }
+
+        $results['status'] = "Author deleted.";
+        return Helper::withJson($response, $results, 200);
+    }
 
 }
+

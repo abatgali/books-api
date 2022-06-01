@@ -125,6 +125,13 @@ class Book extends Model{
         return $book;
     }
 
-
-
+    //Delete a book
+         public static function deleteBook($request) {
+             //Retrieve id from the request
+             $id = $request->getAttribute('id');
+             $book = self::findOrFail($id);
+             return($book ? $book->delete() : $book);
+    }
 }
+
+

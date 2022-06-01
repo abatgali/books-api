@@ -94,7 +94,18 @@ class PublisherController
         return Helper::withJson($response, $results, 200);
     }
 
+//Delete a Publisher
+    public function delete(Request $request, Response $response, array $args) : Response {
+        $publisher = Publisher::deletePublisher($request);
 
+        if(!$publisher) {
+            $results['status']= "Publisher can't be deleted.";
+            return Helper::withJson($response, $results, 500);
+        }
+
+        $results['status'] = "Publisher deleted.";
+        return Helper::withJson($response, $results, 200);
+    }
 
 
 }

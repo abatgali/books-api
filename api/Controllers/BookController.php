@@ -94,6 +94,17 @@ class BookController {
         ];
         return Helper::withJson($response, $results, 200);
     }
+    //Delete a book
+    public function delete(Request $request, Response $response, array $args) : Response {
+        $book = Book::deleteBook($request);
 
+        if(!$book) {
+            $results['status']= "Book can't be deleted.";
+            return Helper::withJson($response, $results, 500);
+        }
+
+        $results['status'] = "Book deleted.";
+        return Helper::withJson($response, $results, 200);
+    }
 
 }
