@@ -76,7 +76,7 @@ class Author extends Model
             $author->$field = $value;
         }
 
-        //Insert the student into the database
+        //Insert the Author into the database
         $author->save();
 
         return $author;
@@ -95,10 +95,37 @@ class Author extends Model
             $publisher->$field = $value;
         }
 
-        //Insert the student into the database
+        //Insert the Author into the database
         $publisher->save();
 
         return $publisher;
     }
+
+    //Update a Author
+    public static function updateAuthor($request) {
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Retrieve id from the request url
+        $id = $request->getAttribute('id');
+        $author = self::findOrFail($id);
+        if(!$author) {
+            return false;
+        }
+        //update attributes of the author
+        foreach($params as $field => $value) {
+            $author->$field = $value;
+        }
+        //save the author into the database
+        $author->save();
+        return $author;
+    }
+    //Delete a Author
+    public static function deleteAuthor($request) {
+        //Retrieve id from the request
+        $id = $request->getAttribute('id');
+        $author = self::findOrFail($id);
+        return($author ? $author->delete() : $author);
+    }
+
 
 }

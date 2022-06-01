@@ -93,7 +93,7 @@ class Book extends Model{
 
         //Retrieve parameters from request body
         $params = $request->getParsedBody();
-        //Create a new Student instance
+        //Create a new book instance
         $book = new Book();
 
         //Set the book's attributes
@@ -101,9 +101,37 @@ class Book extends Model{
             $book->$field = $value;
         }
 
-        //Insert the student into the database
+        //Insert the book into the database
         $book->save();
 
         return $book;
     }
+    //Update a book
+    public static function updateBook($request) {
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Retrieve id from the request url
+        $id = $request->getAttribute('id');
+        $book = self::findOrFail($id);
+        if(!$book) {
+            return false;
+        }
+        //update attributes of the book
+        foreach($params as $field => $value) {
+            $book->$field = $value;
+        }
+        //save the book into the database
+        $book->save();
+        return $book;
+    }
+
+    //Delete a book
+         public static function deleteBook($request) {
+             //Retrieve id from the request
+             $id = $request->getAttribute('id');
+             $book = self::findOrFail($id);
+             return($book ? $book->delete() : $book);
+    }
 }
+
+
