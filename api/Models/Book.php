@@ -25,15 +25,92 @@ class Book extends Model{
     public $timestamps = false;
 
     //retrieve all books
-    public static function getBooks(){
+   
         //retrieve all books
-        $books = self::all();
-        $books->load('authors');
-        $books->load('genre');
-        $books->load('rating');
-        $books->load('publisher');
+       // $books = self::all();
+        //$books->load('authors');
+       // $books->load('genre');
+       // $books->load('rating');
+       // $books->load('publisher');
 
-        return $books;
+       // return $books;
+    public static function getBooks($request){
+    //retrieve all books
+//    $books = self::all();
+//    return $books;
+//        /*********** code for pagination and sorting *************************/
+        //get the total number of row count
+        $count = self::count();
+
+        //Get querystring variables from url
+        $params = $request->getQueryParams();
+
+        //do limit and offset exist?
+        $limit = array_key_exists('limit', $params) ? (int)$params['limit'] : 5;   //items per page
+        $offset = array_key_exists('offset', $params) ? (int)$params['offset'] : 0;  //offset of the first item
+
+        //pagination
+        $links = self::getLinks($request, $limit, $offset);
+
+        //build query
+        $query = self::with('authors');  //build the query to get all books
+        $query = $query->skip($offset)->take($limit);  //limit the rows
+
+        //code for sorting
+        $sort_key_array = self::getSortKeys($request);
+
+        //soft the output by one or more columns
+        foreach ($sort_key_array as $column => $direction) {
+            $query->orderBy($column, $direction);
+        }
+
+        //retrieve the books
+        $books = $query->get();  //Finally, run the query and get the results
+
+        //construct the data for response
+        $results = [
+            'totalCount' => $count,
+            'limit' => $limit,
+            'offset' => $offset,
+            'links' => $links,
+            'sort' => '$sort_key_array',
+            'data' => $books,
+        ];
+
+        return $results;
+    }
+
+        public static function getBookById(string $book_id) {
+            $book = self::findOrFail($book_id);
+            $book->load('genre');
+            return $book;
+        }
+//--------
+    // Return an array of links for pagination. The array includes links for the current, first, next, and last pages.
+    private static function getLinks($request, $limit, $offset) {
+        $count = self::count();
+
+        // Get request uri and parts
+        $uri = $request->getUri();
+        if($port = $uri->getPort()) {
+            $port = ':' . $port;
+        }
+        $base_url = $uri->getScheme() . "://" . $uri->getHost() . $port . $uri->getPath();
+
+        // Construct links for pagination
+        $links = [];
+        $links[] = ['rel' => 'self', 'href' => "$base_url?limit=$limit&offset=$offset"];
+        $links[] = ['rel' => 'first', 'href' => "$base_url?limit=$limit&offset=0"];
+        if ($offset - $limit >= 0) {
+            $links[] = ['rel' => 'prev', 'href' => "$base_url?limit=$limit&offset=" . $offset - $limit];
+        }
+        if ($offset + $limit < $count) {
+            $links[] = ['rel' => 'next', 'href' => "$base_url?limit=$limit&offset=" . $offset + $limit];
+        }
+        $links[] = ['rel' => 'last', 'href' => "$base_url?limit=$limit&offset=" . $limit * (ceil($count / $limit) - 1)];
+
+        return $links;
+    }
     }
 
     // retrieve a specific book
