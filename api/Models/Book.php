@@ -25,6 +25,7 @@ class Book extends Model{
     public $timestamps = false;
 
     //retrieve all books
+<<<<<<< HEAD
     public static function getBooks($request){
     //retrieve all books
 //    $books = self::all();
@@ -133,12 +134,47 @@ class Book extends Model{
         return $sort_key_array;
     }
 
+=======
+    public static function getBooks(){
+        //retrieve all books
+        $books = self::all();
+        $books->load('authors');
+        $books->load('genre');
+        $books->load('rating');
+        $books->load('publisher');
+>>>>>>> 6aa70aa207ed70b574f9294525518fd7d9d3a240
 
-        // defining 1-M(inverse relationship) b/w genres and books
-        public function genre()
-        {
-            return $this->belongsTo(Genre::class, 'genre_id');
-        }
+        return $books;
+    }
+
+    // retrieve a specific book
+    public static function getBookById(string $book_id) {
+        $book = self::findOrFail($book_id);
+        $book->load('genre');
+        $book->load('rating');
+        $book->load('publisher');
+        $book->load('authors');
+
+        return $book;
+    }
+
+    // defining 1-M(inverse relationship) b/w genres and books
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class, 'genre_id');
+    }
+
+    // defining 1-M(inverse relationship) b/w genres and books
+    public function rating()
+    {
+        return $this->belongsTo(Rating::class, 'rating_id');
+    }
+
+    // defining 1-M(inverse relationship) b/w genres and books
+    public function publisher()
+    {
+        return $this->belongsTo(Publisher::class, 'publisher_id');
+    }
 
     // Define the many-to-many relationship between Books and Author model classes.
     public function authors(){
@@ -168,7 +204,7 @@ class Book extends Model{
 
         //Retrieve parameters from request body
         $params = $request->getParsedBody();
-        //Create a new Student instance
+        //Create a new book instance
         $book = new Book();
 
         //Set the book's attributes
@@ -176,9 +212,37 @@ class Book extends Model{
             $book->$field = $value;
         }
 
-        //Insert the student into the database
+        //Insert the book into the database
         $book->save();
 
         return $book;
     }
+    //Update a book
+    public static function updateBook($request) {
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Retrieve id from the request url
+        $id = $request->getAttribute('id');
+        $book = self::findOrFail($id);
+        if(!$book) {
+            return false;
+        }
+        //update attributes of the book
+        foreach($params as $field => $value) {
+            $book->$field = $value;
+        }
+        //save the book into the database
+        $book->save();
+        return $book;
+    }
+
+    //Delete a book
+         public static function deleteBook($request) {
+             //Retrieve id from the request
+             $id = $request->getAttribute('id');
+             $book = self::findOrFail($id);
+             return($book ? $book->delete() : $book);
+    }
 }
+
+

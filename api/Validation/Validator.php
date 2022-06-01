@@ -77,4 +77,16 @@ class Validator
 
         return self::validate($request, $rules);
     }
+
+    // Validate Genre data
+    public static function validateGenre($request) : bool {
+        //Define all the validation rules
+        $rules = [
+            'fiction_nonfiction' => v::alpha(),
+            'genre_name' => v::alpha(' &')
+        ];
+
+        return self::validate($request, $rules);
+    }
+
 }

@@ -59,9 +59,42 @@ class Publisher extends Model
             $publisher->$field = $value;
         }
 
-        //Insert the student into the database
+        //Insert the publisher into the database
         $publisher->save();
 
         return $publisher;
     }
+
+    // 1-M relationship b/w publishers and books
+    public function books()
+    {
+        return $this->hasMany(Book::class, 'publisher_id');
+    }
+
+    //Update a publisher
+    public static function updatePublisher($request) {
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Retrieve id from the request url
+        $id = $request->getAttribute('id');
+        $publisher = self::findOrFail($id);
+        if(!$publisher) {
+            return false;
+        }
+        //update attributes of the publisher
+        foreach($params as $field => $value) {
+            $publisher->$field = $value;
+        }
+        //save the publisher into the database
+        $publisher->save();
+        return $publisher;
+    }
+    //Delete a Publisher
+    public static function deleteAuthor($request) {
+        //Retrieve id from the request
+        $id = $request->getAttribute('id');
+        $publisher = self::findOrFail($id);
+        return($publisher ? $publisher->delete() : $publisher);
+    }
+
 }

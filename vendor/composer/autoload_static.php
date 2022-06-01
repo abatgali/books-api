@@ -42,6 +42,7 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Console\\' => 26,
+            'Sokil\\IsoCodes\\' => 15,
             'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
         ),
@@ -139,6 +140,10 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Sokil\\IsoCodes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sokil/php-isocodes/src',
         ),
         'Slim\\Psr7\\' => 
         array (

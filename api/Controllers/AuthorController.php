@@ -34,14 +34,14 @@ class AuthorController {
         return Helper::withJson($response, $results, 200);
     }
 
-    //View all classes of a student
+    //View all classes of a author
     public function viewAuthorBooks(Request $request, Response $response, array $args) : Response {
         $id = $args['id'];
         $results = Author::getAuthorBooks($id);
         return Helper::withJson($response, $results, 200);
     }
 
-    //Create a student
+    //Create a author
     public function create(Request $request, Response $response, array $args) : Response {
 
         //Validate the request
@@ -55,7 +55,7 @@ class AuthorController {
             return Helper::withJson($response, $results, 500);
         }
 
-        //Create a new student
+        //Create a new author
         $author = Author::createAuthors($request);
 
         if(!$author) {
@@ -70,4 +70,41 @@ class AuthorController {
 
         return Helper::withJson($response, $results, 201);
     }
+//Update a author
+    public function update(Request $request, Response $response, array $args) : Response {
+        //Validate the request
+        $validation = Validator::validateAuthor($request);
+        //if validation failed
+        if(!$validation) {
+            $results = [
+                'status' => "Validation failed",
+                'errors' => Validator::getErrors()
+            ];
+            return Helper::withJson($response, $results, 500);
+        }
+        $author = Author::updateAuthor($request);
+        if(!$author) {
+            $results['status']= "Author cannot been updated.";
+            return Helper::withJson($response, $results, 500);
+        }
+        $results = [
+            'status' => "Author has been updated.",
+            'data' => $author
+        ];
+        return Helper::withJson($response, $results, 200);
+    }
+    //Delete a Author
+    public function delete(Request $request, Response $response, array $args) : Response {
+        $author = Author::deleteAuthor($request);
+
+        if(!$author) {
+            $results['status']= "Author can't be deleted.";
+            return Helper::withJson($response, $results, 500);
+        }
+
+        $results['status'] = "Author deleted.";
+        return Helper::withJson($response, $results, 200);
+    }
+
 }
+

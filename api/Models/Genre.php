@@ -53,4 +53,50 @@ class Genre extends Model
         $books = self::findOrFail($id)->books;
         return $books;
     }
+
+    //Insert a new genre
+    public static function createGenres($request) {
+
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Create a new author instance
+        $genre = new Genre();
+
+        //Set the book's attributes
+        foreach($params as $field => $value) {
+            $genre->$field = $value;
+        }
+
+        //Insert the student into the database
+        $genre->save();
+
+        return $genre;
+    }
+
+    //Update genre
+    public static function updateGenre($request) {
+        //Retrieve parameters from request body
+        $params = $request->getParsedBody();
+        //Retrieve id from the request url
+        $id = $request->getAttribute('id');
+        $genre = self::findOrFail($id);
+        if(!$genre) {
+            return false;
+        }
+        //update attributes of the student
+        foreach($params as $field => $value) {
+            $genre->$field = $value;
+        }
+        //save the student into the database
+        $genre->save();
+        return $genre;
+    }
+
+    //Delete a genre
+    public static function deleteGenre($request) {
+        //Retrieve id from the request
+        $id = $request->getAttribute('id');
+        $genre = self::findOrFail($id);
+        return($genre ? $genre->delete() : $genre);
+    }
 }
