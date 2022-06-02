@@ -25,6 +25,15 @@ class Book extends Model{
     public $timestamps = false;
 
     //retrieve all books
+   
+        //retrieve all books
+       // $books = self::all();
+        //$books->load('authors');
+       // $books->load('genre');
+       // $books->load('rating');
+       // $books->load('publisher');
+
+       // return $books;
     public static function getBooks($request){
     //retrieve all books
 //    $books = self::all();
@@ -102,48 +111,6 @@ class Book extends Model{
 
         return $links;
     }
-
-//------------
-    /*
-         * Sort keys are optionally enclosed in [ ], separated with commas;
-         * Sort directions can be optionally appended to each sort key, separated by :.
-         * Sort directions can be 'asc' or 'desc' and defaults to 'asc'.
-         * Examples: sort=[number:asc,title:desc], sort=[number, title:desc]
-         * This function retrieves sorting keys from uri and returns an array.
-        */
-    private static function getSortKeys($request) {
-        $sort_key_array = [];
-
-        // Get querystring variables from url
-        $params = $request->getQueryParams();
-
-        if (array_key_exists('sort', $params)) {
-            $sort = preg_replace('/^\[|\]$|\s+/', '', $params['sort']);  // remove white spaces, [, and ]
-            $sort_keys = explode(',', $sort); //get all the key:direction pairs
-            foreach ($sort_keys as $sort_key) {
-                $direction = 'asc';
-                $column = $sort_key;
-                if (strpos($sort_key, ':')) {
-                    list($column, $direction) = explode(':', $sort_key);
-                }
-                $sort_key_array[$column] = $direction;
-            }
-        }
-
-        return $sort_key_array;
-    }
-
-=======
-    public static function getBooks(){
-        //retrieve all books
-        $books = self::all();
-        $books->load('authors');
-        $books->load('genre');
-        $books->load('rating');
-        $books->load('publisher');
->>>>>>> 6aa70aa207ed70b574f9294525518fd7d9d3a240
-
-        return $books;
     }
 
     // retrieve a specific book
