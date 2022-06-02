@@ -69,7 +69,7 @@ class Validator
     public static function validatePublisher($request) : bool {
         //Define all the validation rules
         $rules = [
-            'publisher_id' => v::number(),
+            //'publisher_id' => v::number(),
             'publisher_name' => v::alpha(),
             'address' => v::charset('ASCII'),
             'website' => v::url()

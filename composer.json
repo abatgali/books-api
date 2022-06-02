@@ -4,7 +4,7 @@
         "slim/psr7": "^1.5",
         "php-di/php-di": "^6.4",
         "illuminate/database": "8.*",
-        "respect/validation": "2.2"
+        "respect/validation": "^2.2"
     },
 
     "autoload": {

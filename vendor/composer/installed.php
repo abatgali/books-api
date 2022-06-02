@@ -5,11 +5,9 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-<<<<<<< HEAD
-        'reference' => '0f53fce34c92dda5ddc3b0b359a604af97829741',
-=======
-        'reference' => '9a408fd44fc9256cd84edd241931df31656ffb5a',
->>>>>>> 6aa70aa207ed70b574f9294525518fd7d9d3a240
+
+        'reference' => '548d9dcd157d73d81cd1e58c144065e2c0bfaea9',
+
         'name' => '__root__',
         'dev' => true,
     ),
@@ -20,11 +18,9 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-<<<<<<< HEAD
-            'reference' => '0f53fce34c92dda5ddc3b0b359a604af97829741',
-=======
-            'reference' => '9a408fd44fc9256cd84edd241931df31656ffb5a',
->>>>>>> 6aa70aa207ed70b574f9294525518fd7d9d3a240
+
+            'reference' => '548d9dcd157d73d81cd1e58c144065e2c0bfaea9',
+
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -260,12 +256,12 @@
             'dev_requirement' => false,
         ),
         'respect/validation' => array(
-            'pretty_version' => '2.2.0',
-            'version' => '2.2.0.0',
+            'pretty_version' => '2.2.3',
+            'version' => '2.2.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../respect/validation',
             'aliases' => array(),
-            'reference' => '3dcd859d986f1b586b5539ea19962723ab7352ed',
+            'reference' => '4c21a7ffc9a4915673cb2c2843963919e664e627',
             'dev_requirement' => false,
         ),
         'slim/psr7' => array(
@@ -284,15 +280,6 @@
             'install_path' => __DIR__ . '/../slim/slim',
             'aliases' => array(),
             'reference' => '0dfc7d2fdf2553b361d864d51af3fe8a6ad168b0',
-            'dev_requirement' => false,
-        ),
-        'sokil/php-isocodes' => array(
-            'pretty_version' => '3.3.15',
-            'version' => '3.3.15.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../sokil/php-isocodes',
-            'aliases' => array(),
-            'reference' => '3342d946e85055592a216520f2091e6001265b78',
             'dev_requirement' => false,
         ),
         'symfony/console' => array(
