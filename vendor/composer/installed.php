@@ -5,7 +5,9 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+
         'reference' => '548d9dcd157d73d81cd1e58c144065e2c0bfaea9',
+
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +18,9 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+
             'reference' => '548d9dcd157d73d81cd1e58c144065e2c0bfaea9',
+
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -91,6 +95,15 @@
             'reference' => '89245b6e19017f627a35af3874ad9251b76b02cc',
             'dev_requirement' => false,
         ),
+        'laravel/serializable-closure' => array(
+            'pretty_version' => 'v1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/serializable-closure',
+            'aliases' => array(),
+            'reference' => '09f0e9fb61829f628205b7c94906c28740ff9540',
+            'dev_requirement' => false,
+        ),
         'nesbot/carbon' => array(
             'pretty_version' => '2.58.0',
             'version' => '2.58.0.0',
@@ -109,15 +122,6 @@
             'reference' => '181d480e08d9476e61381e04a71b34dc0432e812',
             'dev_requirement' => false,
         ),
-        'opis/closure' => array(
-            'pretty_version' => '3.6.3',
-            'version' => '3.6.3.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../opis/closure',
-            'aliases' => array(),
-            'reference' => '3d81e4309d2a927abbe66df935f4bb60082805ad',
-            'dev_requirement' => false,
-        ),
         'php-di/invoker' => array(
             'pretty_version' => '2.3.3',
             'version' => '2.3.3.0',
@@ -128,12 +132,12 @@
             'dev_requirement' => false,
         ),
         'php-di/php-di' => array(
-            'pretty_version' => '6.3.5',
-            'version' => '6.3.5.0',
+            'pretty_version' => '6.4.0',
+            'version' => '6.4.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../php-di/php-di',
             'aliases' => array(),
-            'reference' => 'b8126d066ce144765300ee0ab040c1ed6c9ef588',
+            'reference' => 'ae0f1b3b03d8b29dff81747063cbfd6276246cc4',
             'dev_requirement' => false,
         ),
         'php-di/phpdoc-reader' => array(
@@ -146,12 +150,12 @@
             'dev_requirement' => false,
         ),
         'psr/container' => array(
-            'pretty_version' => '1.1.1',
-            'version' => '1.1.1.0',
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/container',
             'aliases' => array(),
-            'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
+            'reference' => '513e0666f7216c7459170d56df27dfcefe1689ea',
             'dev_requirement' => false,
         ),
         'psr/container-implementation' => array(
@@ -270,12 +274,12 @@
             'dev_requirement' => false,
         ),
         'slim/slim' => array(
-            'pretty_version' => '4.9.0',
-            'version' => '4.9.0.0',
+            'pretty_version' => '4.10.0',
+            'version' => '4.10.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../slim/slim',
             'aliases' => array(),
-            'reference' => '44d3c9c0bfcc47e52e42b097b6062689d21b904b',
+            'reference' => '0dfc7d2fdf2553b361d864d51af3fe8a6ad168b0',
             'dev_requirement' => false,
         ),
         'symfony/console' => array(

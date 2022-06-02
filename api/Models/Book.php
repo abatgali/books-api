@@ -28,6 +28,7 @@ class Book extends Model{
     public static function getBooks($request){
 
         /*********** code for pagination and sorting *************************/
+
         //get the total number of row count
         $count = self::count();
 
@@ -53,7 +54,7 @@ class Book extends Model{
             $query->orderBy($column, $direction);
         }
 
-        //retrieve the courses
+        //retrieve the books
         $books = $query->get();  //Finally, run the query and get the results
 
         //construct the data for response
