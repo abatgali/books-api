@@ -29,7 +29,7 @@ class PublisherController
     //list all publishers
     public function index(Request $request, Response $response, array $args): Response
     {
-        $results = Publisher::getPublishers();
+        $results = Publisher::getPublishers($request);
         return Helper::withJson($response, $results, 200);
     }
 

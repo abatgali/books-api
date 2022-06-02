@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -21,7 +21,6 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        '2df68f9e79c919e2d88506611769ed2e' => __DIR__ . '/..' . '/respect/stringifier/src/stringify.php',
         'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
     );
 
@@ -43,14 +42,8 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Console\\' => 26,
-            'Sokil\\IsoCodes\\' => 15,
             'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
-        ),
-        'R' => 
-        array (
-            'Respect\\Validation\\' => 19,
-            'Respect\\Stringifier\\' => 20,
         ),
         'P' => 
         array (
@@ -142,10 +135,6 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Sokil\\IsoCodes\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sokil/php-isocodes/src',
-        ),
         'Slim\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/psr7/src',
@@ -153,14 +142,6 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
-        ),
-        'Respect\\Validation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/respect/validation/library',
-        ),
-        'Respect\\Stringifier\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/respect/stringifier/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
