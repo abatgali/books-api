@@ -35,9 +35,6 @@ class Publisher extends Model
     //retrieve all publishers
     public static function getPublishers($request)
     {
-//        $publishers = self::all();
-//        return $publishers;
-
 
         /*********** code for pagination and sorting *************************/
         //get the total number of row count
@@ -132,7 +129,7 @@ class Publisher extends Model
         return $publisher;
     }
     //Delete a Publisher
-    public static function deleteAuthor($request) {
+    public static function deletePublisher($request) {
         //Retrieve id from the request
         $id = $request->getAttribute('id');
         $publisher = self::findOrFail($id);
