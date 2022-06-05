@@ -88,5 +88,16 @@ class Validator
 
         return self::validate($request, $rules);
     }
+    // Validate attributes of a User model. Do not validate fields having default values (id, created_at, and updated_at)
+    public static function validateUser($request) : bool {
+        $rules = [
+            'name' => v::alnum(' '),
+            'email' => v::email(),
+            'username' => v::notEmpty(),
+            'password' => v::notEmpty(),
+            'role' => v::number()->between(1, 4)
+        ];
 
+        return self::validate($request, $rules);
+    }
 }
