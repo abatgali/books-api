@@ -8,10 +8,12 @@
  */
 
 namespace BooksAPI\Models;
+
 use Illuminate\Database\Eloquent\Model;
 
 
-class User extends Model {
+class User extends Model
+{
 //The table associated with this model. "users" is the default name.
     protected $table = 'users';
 //The primary key of the table. "id" is the default name.
@@ -23,8 +25,10 @@ class User extends Model {
 //Do the created_at and updated_at columns exist in the table? "True" is the default
 //value.
     public $timestamps = true;
+
 //List all users
-    public static function getUsers() {
+    public static function getUsers()
+    {
         $users = self::all();
         return $users;
     }
@@ -66,13 +70,13 @@ class User extends Model {
         $id = $request->getAttribute('id');
         $user = self::findOrFail($id);
 
-        if(!$user) {
+        if (!$user) {
             return false;
         }
 
         //update attributes of the user
-        foreach($params as $field => $value) {
-            $user->$field =  ($field == "password") ? password_hash($value, PASSWORD_DEFAULT) : $value;
+        foreach ($params as $field => $value) {
+            $user->$field = ($field == "password") ? password_hash($value, PASSWORD_DEFAULT) : $value;
         }
 
         // Update the user
@@ -86,6 +90,18 @@ class User extends Model {
         $user = self::findOrFail($request->getAttribute('id'));
         return ($user ? $user->delete() : $user);
     }
+
+        /************* User Authentication and Authorization Methods ************************/
+    //Authenticate a user by username and password
+        public static function authenticateUser($username, $password){
+            //Retrieve the first record from the database table that matches the username
+            $user = self::where('username', $username)->first();
+            if (!$user) {
+                return false;
+            }
+        //Verify password.
+            return password_verify($password, $user->password) ? $user : false;
+        }
 
 
 }
