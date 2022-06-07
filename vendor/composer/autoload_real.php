@@ -50,7 +50,6 @@ class ComposerAutoloaderInit627cd2bbb501f6f97625be2831ed4453
             }
         }
 
-
         $loader->register(true);
 
         if ($useStaticLoader) {

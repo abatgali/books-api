@@ -12,7 +12,8 @@ use Slim\App;
 use Slim\Routing\RouteCollectorProxy;
 use BooksAPI\Authentication\{
     MyAuthenticator,
-    BasicAuthenticator
+    BasicAuthenticator,
+    BearerAuthenticator
 };
 
 return function(App $app){
@@ -21,15 +22,6 @@ return function(App $app){
     $app->get('/', function (Request $request, Response $response, array $args) {
         $response->getBody()->write('Welcome to Books API!');
         return $response;
-    });
-
-    // User route group
-    $app->group('/api/v1/users', function (RouteCollectorProxy $group) {
-        $group->get('', 'User:index');
-        $group->get('/{id}', 'User:view');
-        $group->post('', 'User:create');
-        $group->put('/{id}', 'User:update');
-        $group->delete('/{id}', 'User:delete');
     });
 
     //Route group for api/v1 pattern
@@ -43,7 +35,7 @@ return function(App $app){
             $group->post('', 'Book:create');
             $group->put('/{id}', 'Book:update');
             $group->delete('/{id}', 'Book:delete');
-        });
+        })->add(new BearerAuthenticator());
 
         //Route group for Authors pattern
         $group->group('/authors', function (RouteCollectorProxy $group) {
@@ -78,7 +70,7 @@ return function(App $app){
             $group->post('', 'Publisher:create');
             $group->put('/{id}', 'Publisher:update');
             $group->delete('/{id}', 'Publisher:delete');
-        });
+        })->add(new BasicAuthenticator());
 
         //Route group for Ratings pattern
         $group->group('/ratings', function (RouteCollectorProxy $group) {
@@ -86,9 +78,17 @@ return function(App $app){
             $group->get('/{id}', 'Rating:view');
         });
 
-        //}); //no auth
-        //})->add(new MyAuthenticator()); //MyAuthentication
-    })->add(new BasicAuthenticator()); //BasicAuthenticator
+        //Route group for Users pattern
+        $group->group('/users', function (RouteCollectorProxy $group) {
+            $group->get('', 'User:index');
+            $group->get('/{id}', 'User:view');
+            $group->post('', 'User:create');
+            $group->put('/{id}', 'User:update');
+            $group->delete('/{id}', 'User:delete');
+            $group->post('/authBearer', 'User:authBearer');
+        })->add(new BasicAuthenticator()); //BasicAuthenticator
+
+    });
 
 
 };
