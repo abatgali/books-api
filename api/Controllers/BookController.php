@@ -17,13 +17,13 @@ use BooksAPI\Validation\Validator;
 class BookController {
     //list all books
     public function index( Request $request, Response $response, array $args) : Response {
-        //$results = Book::getBooks();
+
         //Get querystring variables from url
         $params = $request->getQueryParams();
         $term = array_key_exists('q', $params) ? $params['q'] : "";
 
         //Call the model method to get books
-        $results = ($term) ? Book::searchBooks($term) : Book::getBooks();
+        $results = ($term) ? Book::searchBooks($term) : Book::getBooks($request);
 
         return Helper::withJson($response, $results, 200);
     }

@@ -13,7 +13,8 @@ use BooksAPI\Controllers\{
     GenreController,
     AuthorAndBooksController,
     PublisherController,
-    RatingController
+    RatingController,
+    UserController
 };
 
 return function(Container $container) {
@@ -41,5 +42,9 @@ return function(Container $container) {
         //dependencies for Rating Table
         $container->set('Rating', function () {
             return new RatingController();
-    });
+         });
+         // Set a dependency called "User"
+        $container->set('User', function() {
+        return new UserController();
+        });
 };

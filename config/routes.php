@@ -73,5 +73,14 @@ return function(App $app){
             $group->get('/{id}','Rating:view');
         });
     });
+    // User route group
+    $app->group('/api/v1/users', function (RouteCollectorProxy $group) {
+        $group->get('', 'User:index');
+        $group->get('/{id}', 'User:view');
+        $group->post('', 'User:create');
+        $group->put('/{id}', 'User:update');
+        $group->delete('/{id}', 'User:delete');
+    });
+
 };
 

@@ -19,7 +19,6 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '2df68f9e79c919e2d88506611769ed2e' => __DIR__ . '/..' . '/respect/stringifier/src/stringify.php',
         'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
@@ -43,7 +42,6 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Console\\' => 26,
-            'Sokil\\IsoCodes\\' => 15,
             'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
         ),
@@ -61,9 +59,9 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
             'Psr\\Container\\' => 14,
             'PhpDocReader\\' => 13,
         ),
-        'O' => 
+        'L' => 
         array (
-            'Opis\\Closure\\' => 13,
+            'Laravel\\SerializableClosure\\' => 28,
         ),
         'I' => 
         array (
@@ -142,10 +140,6 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Sokil\\IsoCodes\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sokil/php-isocodes/src',
-        ),
         'Slim\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/psr7/src',
@@ -188,9 +182,9 @@ class ComposerStaticInit627cd2bbb501f6f97625be2831ed4453
         array (
             0 => __DIR__ . '/..' . '/php-di/phpdoc-reader/src/PhpDocReader',
         ),
-        'Opis\\Closure\\' => 
+        'Laravel\\SerializableClosure\\' => 
         array (
-            0 => __DIR__ . '/..' . '/opis/closure/src',
+            0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
         ),
         'Invoker\\' => 
         array (
