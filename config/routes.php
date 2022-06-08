@@ -36,7 +36,8 @@ return function(App $app){
             $group->post('', 'Book:create');
             $group->put('/{id}', 'Book:update');
             $group->delete('/{id}', 'Book:delete');
-        })->add(new BearerAuthenticator());
+//        })->add(new BearerAuthenticator());
+        });
 
         //Route group for Authors pattern
         $group->group('/authors', function (RouteCollectorProxy $group) {
@@ -90,7 +91,7 @@ return function(App $app){
             $group->post('/authJWT', 'User:authJWT');
         });
         //})->add(new BasicAuthenticator()); //BasicAuthenticator
-    })->add(new JWTAuthenticator()); //JWT Authentication
+    }); //JWT Authentication
 
 
 

@@ -190,6 +190,6 @@ class User extends Model
 //    //Redirect a user to log into a Google account or return a token object
 //    public function oauth2(Request $request, Response $response) : Response {
 
-}
+//}
 
 }
