@@ -132,4 +132,28 @@ class UserController
 
         return Helper::withJson($response, $results, 200);
     }
+
+    //Validate a user's username and password. Return a JWT token on success or error on failure
+    public function authJWT(Request $request, Response $response) : Response {
+        //Retrieve username & password from request body
+        $params = $request->getParsedBody();
+        $username = $params['username'];
+        $password = $params['password'];
+
+        //Verify username and password
+        $user = User::authenticateUser($username, $password);
+
+        if(!$user) {
+        return Helper::withJson($response, ['Status' => 'Login failed.'], 401); }
+
+        //Username and password are valid. Generate a JWT.
+        $jwt = User::generateJWT($user->id);
+        $results = [ 'Status' => 'Login successful',
+            'jwt' => $jwt,
+            'name' => $user-> name,
+            'role' => $user->role
+        ];
+        //return the results
+        return Helper::withJson($response, $results, 200);
+    }
 }

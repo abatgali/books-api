@@ -13,7 +13,8 @@ use Slim\Routing\RouteCollectorProxy;
 use BooksAPI\Authentication\{
     MyAuthenticator,
     BasicAuthenticator,
-    BearerAuthenticator
+    BearerAuthenticator,
+    JWTAuthenticator
 };
 
 return function(App $app){
@@ -86,9 +87,12 @@ return function(App $app){
             $group->put('/{id}', 'User:update');
             $group->delete('/{id}', 'User:delete');
             $group->post('/authBearer', 'User:authBearer');
-        })->add(new BasicAuthenticator()); //BasicAuthenticator
+            $group->post('/authJWT', 'User:authJWT');
+        });
+        //})->add(new BasicAuthenticator()); //BasicAuthenticator
+    })->add(new JWTAuthenticator()); //JWT Authentication
 
-    });
+
 
 
 };

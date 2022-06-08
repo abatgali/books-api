@@ -10,10 +10,17 @@
 namespace BooksAPI\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
-
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+use Google\Client;
+use Google\Service\Oauth2;
 class User extends Model
 {
+    //JWT secret
+    const JWT_KEY = 'MyCollegeAPI-api-v2$';
+   // The lifetime of the JWT token: seconds
+    const JWT_EXPIRE = 3600;
+
 //The table associated with this model. "users" is the default name.
     protected $table = 'users';
 //The primary key of the table. "id" is the default name.
@@ -102,6 +109,87 @@ class User extends Model
         //Verify password.
             return password_verify($password, $user->password) ? $user : false;
         }
+    /****************** JWT Authentication ************************************/
+    /*
+     * Generate a JWT token.
+     * The signature secret rule: the secret must be at least 12 characters in length;
+     * contain numbers; upper and lowercase letters; and one of the following special characters *&!@%^#$.
+     * For more details, please visit https://github.com/RobDWaller/ReallySimpleJWT
+     */
+    public static function generateJWT($id) {
+        //Data for payload
+        $user = self::find($id);
 
+        if(!$user) {
+            return false;
+        }
+
+        $key = self::JWT_KEY;
+        $expiration = time() + self::JWT_EXPIRE;
+        $issuer = 'mycollege-api.com';
+
+        $payload = [
+            'iss' => $issuer,
+            'exp' => $expiration,
+            'isa' => time(),
+            'data' => [
+                'uid' => $id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'role' => $user->role
+            ]
+        ];
+
+        //Generate and return the token
+        return JWT::encode(
+            $payload,  //data to be encoded in the JWT
+            $key,  //the signing key
+            'HS256' //algorithm used to sign the token; defaults to HS256
+        );
+    }
+
+    //Validate a JWT token
+    public static function validateJWT($jwt) {
+        $decoded = JWT::decode($jwt, new Key(self::JWT_KEY, 'HS256'));
+        return $decoded;
+    }
+    /****************************** Google OAuth2 *****************************/
+    //Login to a Google account and return a token
+//    public static function generateOauth2($code)
+//    {
+//        //Create Google API client
+//        $client = new Client();
+//        $client->setAuthConfig(__DIR__ . '/client_secrets.json');
+//        $client->addScope(Oauth2::OPENID);
+//
+//        //initial request: code does not exist
+//        if (!$code) {
+//            //Generate a URL to request access from Google's OAuth 2 server
+//            $auth_url = $client->createAuthUrl();
+//            return $auth_url;
+//        }
+//
+//        //redirected request: code is available
+//        //To exchange an authorization code for an access token, use the authenticate method
+//        $token = $client->fetchAccessTokenWithAuthCode($code);
+//
+//
+//        //You can retrieve the access token with the getAccessToken method
+//        //$token = $client->getAccessToken();
+//        return $token;
+//    }
+//
+//    //Validate an id token received from Google OAuth2 server
+//    public static function validateOauth2($token)
+//    {
+//        $client = new Client();
+//        $client->setAuthConfig(__DIR__ . '/client_secrets.json');
+//        $payload = $client->verifyIdToken($token);
+//        return ($payload) ? true : false;
+//    }
+//    //Redirect a user to log into a Google account or return a token object
+//    public function oauth2(Request $request, Response $response) : Response {
+
+}
 
 }
