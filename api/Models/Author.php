@@ -81,7 +81,6 @@ class Author extends Model
     public static function getAuthorById(string $id)
     {
         $author = self::findOrFail($id);
-        $author->load("");
         return $author;
 
     }
@@ -182,25 +181,6 @@ class Author extends Model
         $author->save();
 
         return $author;
-    }
-
-    //Insert a new publisher
-    public static function createPublishers($request) {
-
-        //Retrieve parameters from request body
-        $params = $request->getParsedBody();
-        //Create a new author instance
-        $publisher = new Publisher();
-
-        //Set the book's attributes
-        foreach($params as $field => $value) {
-            $publisher->$field = $value;
-        }
-
-        //Insert the Author into the database
-        $publisher->save();
-
-        return $publisher;
     }
 
     //Update a Author
