@@ -13,7 +13,8 @@ use Slim\Routing\RouteCollectorProxy;
 use BooksAPI\Authentication\{
     MyAuthenticator,
     BasicAuthenticator,
-    BearerAuthenticator
+    BearerAuthenticator,
+    JWTAuthenticator
 };
 
 return function(App $app){
@@ -45,7 +46,7 @@ return function(App $app){
             $group->post('', 'Author:create');
             $group->put('/{id}', 'Author:update');
             $group->delete('/{id}', 'Author:delete');
-        });
+        })->add(new JWTAuthenticator());
 
         //Route group for Genres pattern
         $group->group('/genres', function (RouteCollectorProxy $group) {
@@ -55,7 +56,7 @@ return function(App $app){
             $group->post('', 'Genre:create');
             $group->put('/{id}', 'Genre:update');
             $group->delete('/{id}', 'Genre:delete');
-        });
+        })->add(new JWTAuthenticator());
 
         //Route group for Authors and Books pattern
         $group->group('/authors_and_books', function (RouteCollectorProxy $group) {
@@ -86,6 +87,7 @@ return function(App $app){
             $group->put('/{id}', 'User:update');
             $group->delete('/{id}', 'User:delete');
             $group->post('/authBearer', 'User:authBearer');
+            $group->post('/authJWT', 'User:authJWT');
         })->add(new BasicAuthenticator()); //BasicAuthenticator
 
     });

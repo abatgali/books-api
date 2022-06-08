@@ -24,7 +24,7 @@ class AuthorController {
         $term = array_key_exists('q', $params) ? $params['q'] : "";
 
         //Call the model method to get authors
-        $results = ($term) ? Author::searchAuthors($term) : Author::getAuthors();
+        $results = ($term) ? Author::searchAuthors($term) : Author::getAuthors($request);
         return Helper::withJson($response, $results, 200);
     }
 
