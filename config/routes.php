@@ -25,6 +25,21 @@ return function(App $app){
         return $response;
     });
 
+    //Route group for Users pattern
+    $app->group('/api/v1/users', function (RouteCollectorProxy $group) {
+        $group->get('', 'User:index');
+        $group->get('/{id}', 'User:view');
+        $group->post('', 'User:create');
+        $group->put('/{id}', 'User:update');
+        $group->delete('/{id}', 'User:delete');
+
+        // route for authenticating a user with Bearer token
+        $group->post('/authBearer', 'User:authBearer');
+
+        // route for JWT authentication
+        $group->post('/authJWT', 'User:authJWT');
+    });
+
     //Route group for api/v1 pattern
     $app->group('/api/v1', function(RouteCollectorProxy $group) {
 
@@ -36,7 +51,7 @@ return function(App $app){
             $group->post('', 'Book:create');
             $group->put('/{id}', 'Book:update');
             $group->delete('/{id}', 'Book:delete');
-        })->add(new BearerAuthenticator());
+        });
 
         //Route group for Authors pattern
         $group->group('/authors', function (RouteCollectorProxy $group) {
@@ -46,7 +61,7 @@ return function(App $app){
             $group->post('', 'Author:create');
             $group->put('/{id}', 'Author:update');
             $group->delete('/{id}', 'Author:delete');
-        })->add(new JWTAuthenticator());
+        });
 
         //Route group for Genres pattern
         $group->group('/genres', function (RouteCollectorProxy $group) {
@@ -56,7 +71,7 @@ return function(App $app){
             $group->post('', 'Genre:create');
             $group->put('/{id}', 'Genre:update');
             $group->delete('/{id}', 'Genre:delete');
-        })->add(new JWTAuthenticator());
+        });
 
         //Route group for Authors and Books pattern
         $group->group('/authors_and_books', function (RouteCollectorProxy $group) {
@@ -71,27 +86,18 @@ return function(App $app){
             $group->post('', 'Publisher:create');
             $group->put('/{id}', 'Publisher:update');
             $group->delete('/{id}', 'Publisher:delete');
-        })->add(new BasicAuthenticator());
+        });
 
         //Route group for Ratings pattern
         $group->group('/ratings', function (RouteCollectorProxy $group) {
             $group->get('', 'Rating:index');
             $group->get('/{id}', 'Rating:view');
         });
-
-        //Route group for Users pattern
-        $group->group('/users', function (RouteCollectorProxy $group) {
-            $group->get('', 'User:index');
-            $group->get('/{id}', 'User:view');
-            $group->post('', 'User:create');
-            $group->put('/{id}', 'User:update');
-            $group->delete('/{id}', 'User:delete');
-            $group->post('/authBearer', 'User:authBearer');
-            $group->post('/authJWT', 'User:authJWT');
-        })->add(new BasicAuthenticator()); //BasicAuthenticator
-
-    });
-
+        //});   //No auth
+        //})->add(new MyAuthenticator());  //MyAuthentication
+        //})->add(new BasicAuthenticator());
+        //})->add(new BearerAuthenticator());
+    })->add(new JWTAuthenticator());
 
 };
 
