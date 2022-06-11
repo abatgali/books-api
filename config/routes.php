@@ -6,6 +6,8 @@
  *Description:
  */
 
+
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
@@ -93,11 +95,11 @@ return function(App $app){
             $group->get('', 'Rating:index');
             $group->get('/{id}', 'Rating:view');
         });
-        //});   //No auth
+    });   //No auth
         //})->add(new MyAuthenticator());  //MyAuthentication
         //})->add(new BasicAuthenticator());
         //})->add(new BearerAuthenticator());
-    })->add(new JWTAuthenticator());
+    //})->add(new JWTAuthenticator());
 
 };
 
