@@ -6,6 +6,8 @@
  *Description:
  */
 
+
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
@@ -18,6 +20,19 @@ use BooksAPI\Authentication\{
 };
 
 return function(App $app){
+
+    //Set up CORS (Cross-Origin Resource Sharing) https://www.slimframework.com/docs/v4/cookbook/enable-cors.html
+    $app->options('/{routes:.+}', function ($request, $response, $args) {
+        return $response;
+    });
+
+    $app->add(function ($request, $handler) {
+        $response = $handler->handle($request);
+        return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    });
 
     // Define app route
     $app->get('/', function (Request $request, Response $response, array $args) {
@@ -93,11 +108,11 @@ return function(App $app){
             $group->get('', 'Rating:index');
             $group->get('/{id}', 'Rating:view');
         });
-        //});   //No auth
+    });   //No auth
         //})->add(new MyAuthenticator());  //MyAuthentication
         //})->add(new BasicAuthenticator());
         //})->add(new BearerAuthenticator());
-    })->add(new JWTAuthenticator());
+    //})->add(new JWTAuthenticator());
 
 };
 
