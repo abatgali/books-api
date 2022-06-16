@@ -36,7 +36,7 @@ class Book extends Model{
         $params = $request->getQueryParams();
 
         //do limit and offset exist?
-        $limit = array_key_exists('limit', $params) ? (int)$params['limit'] : 23;   //items per page
+        $limit = array_key_exists('limit', $params) ? (int)$params['limit'] : 5;   //items per page
         $offset = array_key_exists('offset', $params) ? (int)$params['offset'] : 0;  //offset of the first item
 
         //pagination
@@ -58,15 +58,14 @@ class Book extends Model{
         $books = $query->get();  //Finally, run the query and get the results
 
         //construct the data for response
-        $results =
-            /*'totalCount' => $count,
+        $results = [
+            'totalCount' => $count,
             'limit' => $limit,
             'offset' => $offset,
             'links' => $links,
-            'sort' => $sort_key_array,*/
-            //'data' =>
-            $books
-        ;
+            'sort' => $sort_key_array,
+            'data' => $books
+        ];
 
         return $results;
 
