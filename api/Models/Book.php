@@ -58,15 +58,14 @@ class Book extends Model{
         $books = $query->get();  //Finally, run the query and get the results
 
         //construct the data for response
-        $results =
-            /*'totalCount' => $count,
+        $results = [
+            'totalCount' => $count,
             'limit' => $limit,
             'offset' => $offset,
             'links' => $links,
-            'sort' => $sort_key_array,*/
-            //'data' =>
-            $books
-        ;
+            'sort' => $sort_key_array,
+            'data' => $books
+        ];
 
         return $results;
 
