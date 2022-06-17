@@ -44,7 +44,7 @@ class Publisher extends Model
         $params = $request->getQueryParams();
 
         //do limit and offset exist?
-        $limit = array_key_exists('limit', $params) ? (int)$params['limit'] : 4;   //items per page
+        $limit = array_key_exists('limit', $params) ? (int)$params['limit'] : 20;   //items per page
         $offset = array_key_exists('offset', $params) ? (int)$params['offset'] : 0;  //offset of the first item
 
         //pagination
