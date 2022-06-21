@@ -195,4 +195,24 @@ class Publisher extends Model
 
         return $sort_key_array;
     }
+
+    public static function searchPublishers($term)
+    {
+        if (is_numeric($term)) {
+            $query = self::where('publisher_id', '=', $term);
+        } else {
+            $query = self::where('publisher_name', 'like', "%$term%")
+                ->orWhere('website', 'like', "%$term%")
+                ->orWhere('address', 'like', "%$term%");
+        }
+
+        $matchedPublishers = $query->get();
+
+        //construct the data for response
+        $results = [
+            'data' => $matchedPublishers
+        ];
+
+        return $results;
+    }
 }

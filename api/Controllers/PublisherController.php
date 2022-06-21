@@ -29,7 +29,15 @@ class PublisherController
     //list all publishers
     public function index(Request $request, Response $response, array $args): Response
     {
-        $results = Publisher::getPublishers($request);
+        //$results = Publisher::getPublishers($request);
+
+        //Get querystring variables from url
+        $params = $request->getQueryParams();
+        $term = array_key_exists('q', $params) ? $params['q'] : "";
+
+        //Call the model method to get books
+        $results = ($term) ? Publisher::searchPublishers($term) : Publisher::getPublishers($request);
+
         return Helper::withJson($response, $results, 200);
     }
 
